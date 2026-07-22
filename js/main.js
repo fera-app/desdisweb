@@ -1,6 +1,6 @@
 /* ==========================================================================
    DESDISWEB - Interactive Web Application Logic
-   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals & FERA Gallery
+   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals & FERA/COLUMBARIO Galleries
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- 3. FERA Interactive Image Switcher (Card & Modal) ---
+  // --- 3. FERA Interactive Image Switcher ---
   const feraMainImg = document.getElementById('fera-main-img');
   const feraThumbnails = document.querySelectorAll('[data-fera-img]');
 
@@ -67,7 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 4. Cotizador Interactivo de Presupuesto ---
+  // --- 4. COLUMBARIO Interactive Image Switcher ---
+  const columbarioMainImg = document.getElementById('columbario-main-img');
+  const columbarioThumbnails = document.querySelectorAll('[data-columbario-img]');
+
+  if (columbarioThumbnails.length > 0 && columbarioMainImg) {
+    columbarioThumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        columbarioThumbnails.forEach(t => t.classList.remove('active-thumb'));
+        thumb.classList.add('active-thumb');
+        const newSrc = thumb.getAttribute('data-columbario-img');
+        columbarioMainImg.style.opacity = '0';
+        setTimeout(() => {
+          columbarioMainImg.src = newSrc;
+          columbarioMainImg.style.opacity = '1';
+        }, 150);
+      });
+    });
+  }
+
+  // --- 5. Cotizador Interactivo de Presupuesto ---
   const projectTypeOptions = document.querySelectorAll('[data-calc-type]');
   const addonOptions = document.querySelectorAll('[data-calc-addon]');
   const timelineOptions = document.querySelectorAll('[data-calc-time]');
@@ -79,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const basePrices = {
     landing: { price: 250, name: 'Landing Page de Alta Conversión' },
     corporate: { price: 450, name: 'Sitio Web Corporativo Completo' },
-    custom: { price: 700, name: 'Sistema / App Web a Medida (tipo FERA)' }
+    custom: { price: 700, name: 'Sistema / App Web a Medida (tipo FERA o SacroGest)' }
   };
 
   const addonPrices = {
@@ -167,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCalculator();
 
-  // --- 5. Contact Form Handler ---
+  // --- 6. Contact Form Handler ---
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -181,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 6. Project Modal Handler & Multi-Image Gallery ---
+  // --- 7. Project Modal Handler & Multi-Image Galleries (FERA & COLUMBARIO) ---
   const modal = document.getElementById('project-modal');
   const modalClose = document.getElementById('modal-close');
   const modalTitle = document.getElementById('modal-title');
@@ -198,16 +217,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'img/fera-login.png', label: '🔐 Pantalla de Inicio / Login' },
         { src: 'img/fera-bovinos.png', label: '🐄 Trazabilidad de Bovinos & Ganado' }
       ],
-      tags: ['SaaS ERP', 'UI/UX Dark Theme', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
+      tags: ['SaaS ERP Boutique', 'UI/UX Dark Theme', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
       desc: 'FERA es un sistema de gestión agropecuaria inteligente diseñado para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real. Incluye autenticación segura, notificaciones de alarmas (gestaciones, pagos) y panel de control analítico.'
     },
     columbario: {
-      title: 'Proyecto COLUMBARIO - Sistema Web & Arquitectura de Información',
+      title: 'Proyecto COLUMBARIO - SacroGest (Gestión Parroquial & Memoria)',
       images: [
-        { src: 'img/columbario.png', label: '🏛️ Vista Principal Columbario' }
+        { src: 'img/columbario-dashboard.png', label: '📊 Dashboard & Métricas' },
+        { src: 'img/columbario-plano.png', label: '🗺️ Plano Interactivo & Nichos' },
+        { src: 'img/columbario-login.png', label: '🔐 Acceso & Credenciales' }
       ],
-      tags: ['Sistema Web', 'Arquitectura de Datos', 'Interfaz Ejecutiva', 'SEO & Seguridad'],
-      desc: 'Solución web avanzada diseñada para la gestión de información estructurada y experiencia de usuario sobria y ejecutiva, priorizando tiempos de carga veloces, navegación intuitiva y diseño adaptable a dispositivos móviles.'
+      tags: ['Sistema SacroGest', 'Plano Interactivo de Nichos', 'Gestión de Difuntos & Contratos', 'Alertas de Renovación', 'Sincronización Cloud', 'UI/UX Ejecutiva'],
+      desc: 'COLUMBARIO (SacroGest) es una solución web integral creada para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A, B, C, D, E), enviar alertas inteligentes de renovación/cobro por IA, gestionar contratos administrativos e historial de difuntos inhumados.'
     }
   };
 
