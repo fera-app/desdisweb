@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `Me gustaría conversar para iniciar.`;
 
       sendWhatsappCalcBtn.onclick = () => {
-        window.open(`https://wa.me/573000000000?text=${encodeURIComponent(waMessage)}`, '_blank');
+        window.open(`https://wa.me/573156000174?text=${encodeURIComponent(waMessage)}`, '_blank');
       };
     }
   }
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('form-message')?.value || '';
 
       const waMsg = `¡Hola Felix Rodriguez! Soy ${name} (${email}).\n\nMensaje: ${message}`;
-      window.open(`https://wa.me/573000000000?text=${encodeURIComponent(waMsg)}`, '_blank');
+      window.open(`https://wa.me/573156000174?text=${encodeURIComponent(waMsg)}`, '_blank');
     });
   }
 
