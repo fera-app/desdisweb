@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (sendWhatsappCalcBtn) {
-      const waMessage = `¡Hola Felix! He cotizado un proyecto en DESDISWEB:\n\n` +
+      const waMessage = `¡Hola Felix Rodriguez! He cotizado un proyecto en DESDISWEB:\n\n` +
         `• *Tipo:* ${basePrices[selectedType].name}\n` +
         `• *Adicionales:* ${addonNames.join(', ') || 'Ninguno'}\n` +
         `• *Tiempo:* ${timelineMultipliers[selectedTimeline].name}\n` +
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('form-email')?.value || '';
       const message = document.getElementById('form-message')?.value || '';
 
-      const waMsg = `¡Hola Felix! Soy ${name} (${email}).\n\nMensaje: ${message}`;
+      const waMsg = `¡Hola Felix Rodriguez! Soy ${name} (${email}).\n\nMensaje: ${message}`;
       window.open(`https://wa.me/573000000000?text=${encodeURIComponent(waMsg)}`, '_blank');
     });
   }
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'img/fera-bovinos.png', label: '🐄 Trazabilidad de Bovinos & Ganado' }
       ],
       tags: ['SaaS ERP Boutique', 'UI/UX Dark Theme', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
-      desc: 'FERA es un sistema de gestión agropecuaria inteligente en vivo (disponible en fera-app.pages.dev) diseñado para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real.'
+      desc: 'FERA es un sistema de gestión agropecuaria inteligente en vivo (disponible en fera-app.pages.dev) desarrollado por Felix Rodriguez para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real.'
     },
     columbario: {
       title: 'Proyecto COLUMBARIO - SacroGest Parroquial',
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'img/columbario-login.png', label: '🔐 Acceso & Credenciales' }
       ],
       tags: ['Sistema SacroGest', 'Plano Interactivo de Nichos', 'Gestión de Difuntos & Contratos', 'Alertas de Renovación', 'Sincronización Cloud', 'UI/UX Ejecutiva'],
-      desc: 'COLUMBARIO (SacroGest) es una solución web funcional en vivo (disponible en columbario.pages.dev) creada para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A-E), notificaciones inteligentes e historial de difuntos.'
+      desc: 'COLUMBARIO (SacroGest) es una solución web funcional en vivo (disponible en columbario.pages.dev) desarrollada por Felix Rodriguez para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A-E), notificaciones inteligentes e historial de difuntos.'
     }
   };
 
