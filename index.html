@@ -20,6 +20,68 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Estilos para galería interactiva de FERA */
+    .fera-gallery-selector {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(7, 9, 19, 0.9);
+      border-top: 1px solid var(--border-color);
+      overflow-x: auto;
+    }
+    .fera-thumb-btn {
+      flex: 1;
+      min-width: 100px;
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+    .fera-thumb-btn:hover, .fera-thumb-btn.active-thumb {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    .modal-gallery-bar {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+    }
+    .modal-thumb-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: rgba(255,255,255,0.05);
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      transition: all var(--transition-fast);
+    }
+    .modal-thumb-btn img {
+      width: 32px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .modal-thumb-btn:hover, .modal-thumb-btn.active {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--text-main);
+    }
+  </style>
 </head>
 <body>
 
@@ -53,10 +115,8 @@
 
   <!-- ==================== HERO SECTION WITH PORTADA BG, ANIMATED COGS & WAVES ==================== -->
   <section class="hero-section" id="inicio">
-    <!-- Dark Gradient Overlay over Code Background (portada.webp) -->
     <div class="hero-overlay"></div>
 
-    <!-- Original FontAwesome Rotating Cogs (Tuercas) -->
     <i class="fas fa-cog nut1"></i>
     <i class="fas fa-cog nut2"></i>
 
@@ -74,12 +134,12 @@
           </h1>
 
           <p class="hero-description">
-            Diseño y construyo plataformas web robustas, aplicaciones a medida y sitios de alta conversión. Mi especialidad es transformar conceptos complejos en experiencias digitales elegantes, rápidas y rentables.
+            Diseño y construyo plataformas web robustas, sistemas ERP a medida y sitios de alta conversión. Explora las pantallas reales de FERA y descubre el potencial para tu proyecto.
           </p>
 
           <div class="hero-ctas">
             <a href="#proyectos" class="btn btn-primary">
-              <i class="fa-solid fa-layer-group"></i> Ver Mis Proyectos Insignia
+              <i class="fa-solid fa-layer-group"></i> Ver Capturas Reales de FERA
             </a>
             <a href="#cotizador" class="btn btn-whatsapp">
               <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i> Cotizar Tu Proyecto
@@ -111,26 +171,25 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="file-name">felix_portfolio_core.js</span>
+              <span class="file-name">fera_core_architecture.js</span>
             </div>
             <pre class="code-content"><code><span class="kw">const</span> developer = {
   name: <span class="str">"Felix"</span>,
   brand: <span class="str">"DESDISWEB"</span>,
-  flagshipProjects: [<span class="str">"FERA"</span>, <span class="str">"COLUMBARIO"</span>],
-  skills: [<span class="str">"Arquitectura Web"</span>, <span class="str">"UI/UX"</span>, <span class="str">"SEO"</span>, <span class="str">"High Conversion"</span>],
-  buildProject(clientIdea) {
-    <span class="kw">return</span> <span class="fn">transformToHighSalesPlatform</span>(clientIdea);
+  flagshipProjects: [<span class="str">"FERA (SaaS ERP)"</span>, <span class="str">"COLUMBARIO"</span>],
+  feraModules: [<span class="str">"Dashboard Finanzas"</span>, <span class="str">"Control Bovinos"</span>, <span class="str">"Ventas Leche"</span>],
+  buildSystem(clientRequirements) {
+    <span class="kw">return</span> <span class="fn">createHighPerformancePlatform</span>(clientRequirements);
   }
 };
 
-<span class="comment">// ¡Construyamos tu próximo proyecto ganador!</span>
-developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</span>);</code></pre>
+<span class="comment">// ¡Desarrollemos tu software o sitio web ideal!</span>
+developer.<span class="fn">buildSystem</span>(<span class="str">"Tu Proyecto"</span>);</code></pre>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Original Animated Waves (Olas / Nubes) at Bottom -->
     <div class="wave-container">
       <div class="wave wave1"></div>
       <div class="wave wave2"></div>
@@ -138,47 +197,61 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
     </div>
   </section>
 
-  <!-- ==================== PORTFOLIO SECTION (FERA & COLUMBARIO) ==================== -->
+  <!-- ==================== PORTFOLIO SECTION (FERA REAL SCREENSHOTS & COLUMBARIO) ==================== -->
   <section class="section-padding" id="proyectos">
     <div class="container">
       <div class="section-title-wrapper">
         <span class="section-tag">Portafolio Destacado</span>
         <h2 class="section-title">Mis Proyectos Realizados: <span class="gradient-text">FERA</span> y <span class="gradient-gold">COLUMBARIO</span></h2>
         <p class="section-subtitle">
-          Como realizador principal de estas soluciones tecnológicas, he desarrollado desde la estructura técnica y UI/UX hasta la optimización total de experiencia de usuario.
+          Como realizador principal de estas soluciones tecnológicas, te presento las pantallas reales del sistema <strong>FERA (Gestión Agropecuaria Inteligente)</strong> y la arquitectura de <strong>COLUMBARIO</strong>.
         </p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Proyecto FERA Card -->
+        <!-- Proyecto FERA Card con Galería Interactiva de Pantallas Reales -->
         <article class="glass-card project-card">
-          <div class="project-thumb-container">
-            <img src="img/fera.png" alt="Proyecto FERA desarrollado por Felix" class="project-thumb">
-            <span class="project-badge"><i class="fa-solid fa-star"></i> Flagship Project</span>
+          <div class="project-thumb-container" style="height: 260px;">
+            <img src="img/fera-dashboard.png" id="fera-main-img" alt="Pantalla real de Dashboard FERA desarrollado por Felix" class="project-thumb" style="transition: opacity 0.2s ease;">
+            <span class="project-badge"><i class="fa-solid fa-star"></i> SaaS ERP Boutique</span>
           </div>
+
+          <!-- Selector de Pantallas Reales FERA -->
+          <div class="fera-gallery-selector">
+            <button class="fera-thumb-btn active-thumb" data-fera-img="img/fera-dashboard.png">
+              📊 Dashboard
+            </button>
+            <button class="fera-thumb-btn" data-fera-img="img/fera-login.png">
+              🔐 Login / Acceso
+            </button>
+            <button class="fera-thumb-btn" data-fera-img="img/fera-bovinos.png">
+              🐄 Ganado & Alertas
+            </button>
+          </div>
+
           <div class="project-content">
             <span class="project-role">Realizador & Arquitecto Principal</span>
-            <h3 class="project-title">Proyecto FERA</h3>
+            <h3 class="project-title">Proyecto FERA - Gestión Agropecuaria</h3>
             <p class="project-description">
-              Plataforma web integral diseñada para la gestión optimizada de procesos operacionales y presencia digital corporativa. En FERA implementé una arquitectura limpia, navegación fluida e interfaz ultra-moderna.
+              Sistema SaaS ERP completo para el sector agropecuario. Incluye panel de control en tiempo real, trazabilidad ganadera, registro de producción láctea, alertas de gestación y balances financieros.
             </p>
             <div class="project-tags">
-              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">SaaS ERP Boutique</span>
+              <span class="tech-tag">Dashboard Finanzas</span>
+              <span class="tech-tag">Control de Bovinos</span>
               <span class="tech-tag">JavaScript ES6+</span>
-              <span class="tech-tag">Diseño UI/UX</span>
-              <span class="tech-tag">Optimización SEO</span>
-              <span class="tech-tag">Responsive Design</span>
+              <span class="tech-tag">UI/UX Dark Theme</span>
             </div>
             <a href="#" class="project-link" data-project-trigger="fera">
-              Ver Detalles del Proyecto FERA <i class="fa-solid fa-arrow-right"></i>
+              Ver Todas las Capturas de FERA en HD <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </article>
 
         <!-- Proyecto COLUMBARIO Card -->
         <article class="glass-card project-card">
-          <div class="project-thumb-container">
+          <div class="project-thumb-container" style="height: 260px;">
             <img src="img/columbario.png" alt="Proyecto COLUMBARIO desarrollado por Felix" class="project-thumb">
             <span class="project-badge" style="color:var(--accent-cyan); border-color:var(--border-glow);"><i class="fa-solid fa-gem"></i> Sistema Especializado</span>
           </div>
@@ -186,7 +259,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
             <span class="project-role">Desarrollador Web & UI Specialist</span>
             <h3 class="project-title">Proyecto COLUMBARIO</h3>
             <p class="project-description">
-              Solución digital avanzada enfocada en la gestión de información estructurada y experiencia sobria y ejecutiva. Diseñada meticulosamente para garantizar accesibilidad, rapidez de carga y usabilidad impecable.
+              Solución digital avanzada enfocada en la gestión de información estructurada y experiencia sobria y ejecutiva. Diseñada para garantizar accesibilidad, rapidez de carga y navegación intuitiva.
             </p>
             <div class="project-tags">
               <span class="tech-tag">Arquitectura Web</span>
@@ -205,8 +278,62 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
     </div>
   </section>
 
+  <!-- ==================== SHOWCASE DE MÓDULOS DE FERA ==================== -->
+  <section class="section-padding" style="background: rgba(15, 23, 42, 0.6); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-tag">Desglose Técnico de FERA</span>
+        <h2 class="section-title">Módulos Desarrollados en <span class="gradient-gold">FERA</span></h2>
+        <p class="section-subtitle">
+          Un recorrido visual por las interfaces reales creadas para el sistema FERA.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Módulo 1: Login -->
+        <div class="glass-card" style="overflow:hidden;">
+          <img src="img/fera-login.png" alt="Pantalla Login FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <div style="padding:1.5rem;">
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem; color:var(--accent-emerald);">
+              <i class="fa-solid fa-shield-halved"></i> Autenticación & Bienvenida
+            </h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+              Diseño exclusivo "SaaS ERP Boutique" con tema verde oscuro, login seguro de usuarios y accesos directos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Módulo 2: Dashboard -->
+        <div class="glass-card" style="overflow:hidden;">
+          <img src="img/fera-dashboard.png" alt="Pantalla Dashboard FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <div style="padding:1.5rem;">
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem; color:var(--accent-cyan);">
+              <i class="fa-solid fa-chart-line"></i> Dashboard & Balance Financiero
+            </h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+              Métricas clave en vivo: ventas de leche ($1,051.16), total bovinos (33), inventario y sistema de alertas prioritarias.
+            </p>
+          </div>
+        </div>
+
+        <!-- Módulo 3: Bovinos & Ganado -->
+        <div class="glass-card" style="overflow:hidden;">
+          <img src="img/fera-bovinos.png" alt="Pantalla Bovinos FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <div style="padding:1.5rem;">
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.5rem; color:var(--accent-amber);">
+              <i class="fa-solid fa-cow"></i> Trazabilidad Bovinos & Ganado
+            </h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+              Tabla interactiva con registro de ID, raza, peso, estado de salud y alarmas automáticas de gestación/parto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== SOBRE MÍ / QUIÉN SOY ==================== -->
-  <section class="section-padding" id="quien-soy" style="background: rgba(15, 23, 42, 0.4);">
+  <section class="section-padding" id="quien-soy">
     <div class="container">
       <div class="contact-grid" style="align-items: center;">
         <div>
@@ -216,7 +343,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
             Soy un apasionado desarrollador de software y diseñador web radicado en Tocancipá, Cundinamarca (Colombia). A través de <strong>DESDISWEB</strong>, combino ingeniería técnica de alto nivel con diseño estético enfocado en resultados comerciales.
           </p>
           <p style="color:var(--text-muted); line-height:1.7; margin-bottom:1.5rem;">
-            Haber desarrollado soluciones de la envergadura de <strong>FERA</strong> y <strong>COLUMBARIO</strong> respalda mi compromiso con la calidad de código, la atención al detalle y la entrega de proyectos que verdaderamente aportan valor y ventas a mis clientes.
+            Haber desarrollado soluciones de la complejidad de <strong>FERA</strong> (con control financiero, alertas ganaderas y trazabilidad) y <strong>COLUMBARIO</strong> respalda mi capacidad para construir el software o sitio web que tu empresa necesita.
           </p>
           <div style="display:flex; gap:1.5rem; flex-wrap:wrap;">
             <div style="display:flex; align-items:center; gap:0.5rem; color:var(--text-main); font-weight:700;">
@@ -235,7 +362,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
           <i class="fa-solid fa-laptop-code" style="font-size:3.5rem; color:var(--accent-cyan); margin-bottom:1rem;"></i>
           <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">¿Tienes un proyecto en mente?</h3>
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
-            Puedo ayudarte a diseñar y programar tu nueva web o plataforma con el mismo nivel de dedicación empleado en FERA y COLUMBARIO.
+            Puedo ayudarte a diseñar y programar tu nueva web o sistema a medida con la misma dedicación demostrada en FERA.
           </p>
           <a href="#cotizador" class="btn btn-primary" style="width:100%;">
             <i class="fa-solid fa-calculator"></i> Calcular Presupuesto de Mi Web
@@ -246,7 +373,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
   </section>
 
   <!-- ==================== SERVICIOS ==================== -->
-  <section class="section-padding" id="servicios">
+  <section class="section-padding" id="servicios" style="background: rgba(15, 23, 42, 0.4);">
     <div class="container">
       <div class="section-title-wrapper">
         <span class="section-tag">Servicios Profesionales</span>
@@ -273,7 +400,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
           </div>
           <h3 class="service-title">Landing Pages de Ventas</h3>
           <p class="service-desc">
-            Páginas de aterrizaje de alta conversión para lanzar productos o campañas con integración directa a WhatsApp y CRM.
+            Páginas de aterrizaje de alta conversión para lanzar productos o campañas con integración directa a WhatsApp.
           </p>
         </div>
 
@@ -301,7 +428,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
   </section>
 
   <!-- ==================== COTIZADOR INTERACTIVO ==================== -->
-  <section class="section-padding" id="cotizador" style="background: rgba(15, 23, 42, 0.5);">
+  <section class="section-padding" id="cotizador">
     <div class="container">
       <div class="section-title-wrapper">
         <span class="section-tag">Calculadora de Presupuesto</span>
@@ -314,7 +441,6 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
       <div class="glass-card calculator-container">
         <div class="calc-grid">
           <div>
-            <!-- Paso 1: Tipo de Proyecto -->
             <div class="calc-group-title">1. Selecciona el Tipo de Proyecto</div>
             <div class="calc-options-grid">
               <div class="calc-option-card selected" data-calc-type="landing" data-price="250">
@@ -331,7 +457,6 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
               </div>
             </div>
 
-            <!-- Paso 2: Complementos -->
             <div class="calc-group-title">2. Módulos Adicionales (Opcional)</div>
             <div class="calc-options-grid">
               <div class="calc-option-card" data-calc-addon="whatsapp" data-price="50">
@@ -348,7 +473,6 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
               </div>
             </div>
 
-            <!-- Paso 3: Tiempo de Entrega -->
             <div class="calc-group-title">3. Tiempo de Entrega Deseado</div>
             <div class="calc-options-grid">
               <div class="calc-option-card selected" data-calc-time="normal" data-multiplier="1">
@@ -362,7 +486,6 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
             </div>
           </div>
 
-          <!-- Summary Box -->
           <div class="summary-card">
             <div>
               <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Resumen de tu Cotización</h3>
@@ -396,21 +519,21 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
       <div class="faq-container">
         <div class="faq-item">
           <div class="faq-question">
-            <span>¿En cuánto tiempo estará lista mi página web?</span>
+            <span>¿En cuánto tiempo estará lista mi página web o sistema?</span>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Una Landing Page suele estar lista entre 3 a 5 días hábiles. Un sitio web corporativo o proyecto más complejo (tipo FERA o COLUMBARIO) requiere entre 7 a 15 días hábiles según los requerimientos.
+            Una Landing Page suele estar lista entre 3 a 5 días hábiles. Un sitio web corporativo o plataforma personalizada tipo FERA requiere entre 7 a 15 días hábiles según los requerimientos.
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>¿Puedo ver ejemplos reales de tu trabajo?</span>
+            <span>¿Puedo ver las capturas reales de tus proyectos?</span>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            ¡Por supuesto! En la sección de portafolio puedes revisar el detalle de **FERA** y **COLUMBARIO**, los cuales demuestran la calidad visual y técnica de mis proyectos.
+            ¡Por supuesto! Arriba puedes interactuar directamente con las capturas reales de **FERA (Login, Dashboard y Bovinos)** y consultar el detalle de **COLUMBARIO**.
           </div>
         </div>
 
@@ -420,7 +543,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Sí, todos mis proyectos incluyen garantía y soporte técnico para asegurar que tu sitio funcione siempre de manera óptima y fluida.
+            Sí, todos mis desarrollos incluyen garantía y soporte técnico directo para asegurar el funcionamiento óptimo de tu plataforma.
           </div>
         </div>
       </div>
@@ -435,7 +558,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
           <span class="section-tag">Contacto Directo</span>
           <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
           <p style="color:var(--text-muted); margin-bottom:2rem;">
-            Estoy listo para transformar tu presencia en internet. Escríbeme y analicemos tu idea sin ningún compromiso.
+            Estoy listo para desarrollar tu software o página web. Escríbeme y analicemos tu idea sin ningún compromiso.
           </p>
 
           <div style="display:flex; flex-direction:column; gap:1.5rem;">
@@ -475,7 +598,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
 
             <div class="form-group">
               <label for="form-message">Cuéntame sobre tu proyecto</label>
-              <textarea id="form-message" class="form-control" placeholder="Hola Felix, me gustaría desarrollar una web para mi negocio..."></textarea>
+              <textarea id="form-message" class="form-control" placeholder="Hola Felix, me gustaría desarrollar un proyecto web..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
@@ -528,20 +651,23 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/573000000000?text=Hola%20Felix,%20vi%20tu%20portafolio%20con%20FERA%20y%20COLUMBARIO%20y%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+  <a href="https://wa.me/573000000000?text=Hola%20Felix,%20vi%20tu%20portafolio%20con%20las%20capturas%20de%20FERA%20y%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="whatsapp-badge">1</span>
   </a>
 
-  <!-- PROJECT DETAILS MODAL -->
+  <!-- PROJECT DETAILS MODAL CON GALERÍA DE CAPTURAS REALES DE FERA -->
   <div id="project-modal" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:1.5rem;">
-    <div class="glass-card" style="max-width:700px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; background:var(--bg-dark); border-color:var(--accent-cyan);">
+    <div class="glass-card" style="max-width:800px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; background:var(--bg-dark); border-color:var(--accent-cyan);">
       <button id="modal-close" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:var(--text-main); font-size:1.5rem; cursor:pointer;">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <img id="modal-img" src="" alt="Project Preview" style="border-radius:var(--radius-md); margin-bottom:1.5rem; width:100%; height:260px; object-fit:cover;">
+      <img id="modal-img" src="" alt="Project Preview" style="border-radius:var(--radius-md); margin-bottom:1rem; width:100%; height:320px; object-fit:cover; border:1px solid var(--border-color);">
       
+      <!-- Selector de Galería dentro del Modal -->
+      <div id="modal-gallery" class="modal-gallery-bar"></div>
+
       <h3 id="modal-title" style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;"></h3>
       
       <div id="modal-tags" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem;"></div>
@@ -550,7 +676,7 @@ developer.<span class="fn">buildProject</span>(<span class="str">"Tu Negocio"</s
       
       <div style="display:flex; gap:1rem; justify-content:flex-end;">
         <a href="#cotizador" class="btn btn-primary" onclick="document.getElementById('project-modal').style.display='none';">
-          <i class="fa-solid fa-rocket"></i> Cotizar Proyecto Similar
+          <i class="fa-solid fa-rocket"></i> Cotizar Sistema Similar a FERA
         </a>
       </div>
     </div>
