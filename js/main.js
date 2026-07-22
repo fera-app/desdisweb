@@ -1,6 +1,6 @@
 /* ==========================================================================
    DESDISWEB - Interactive Web Application Logic
-   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals & FERA/COLUMBARIO Galleries
+   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals & FERA/COLUMBARIO Live Links
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 7. Project Modal Handler & Multi-Image Galleries (FERA & COLUMBARIO) ---
+  // --- 7. Project Modal Handler with Live URLs ---
   const modal = document.getElementById('project-modal');
   const modalClose = document.getElementById('modal-close');
   const modalTitle = document.getElementById('modal-title');
@@ -208,27 +208,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalImg = document.getElementById('modal-img');
   const modalTags = document.getElementById('modal-tags');
   const modalGallery = document.getElementById('modal-gallery');
+  const modalLiveBtn = document.getElementById('modal-live-btn');
 
   const projectDetailsData = {
     fera: {
-      title: 'Proyecto FERA - Gestión Agropecuaria Inteligente (SaaS ERP Boutique)',
+      title: 'Proyecto FERA - Gestión Agropecuaria Inteligente',
+      liveUrl: 'https://fera-app.pages.dev',
       images: [
         { src: 'img/fera-dashboard.png', label: '📊 Dashboard & Finanzas' },
         { src: 'img/fera-login.png', label: '🔐 Pantalla de Inicio / Login' },
         { src: 'img/fera-bovinos.png', label: '🐄 Trazabilidad de Bovinos & Ganado' }
       ],
       tags: ['SaaS ERP Boutique', 'UI/UX Dark Theme', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
-      desc: 'FERA es un sistema de gestión agropecuaria inteligente diseñado para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real. Incluye autenticación segura, notificaciones de alarmas (gestaciones, pagos) y panel de control analítico.'
+      desc: 'FERA es un sistema de gestión agropecuaria inteligente en vivo (disponible en fera-app.pages.dev) diseñado para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real.'
     },
     columbario: {
-      title: 'Proyecto COLUMBARIO - SacroGest (Gestión Parroquial & Memoria)',
+      title: 'Proyecto COLUMBARIO - SacroGest Parroquial',
+      liveUrl: 'https://columbario.pages.dev',
       images: [
         { src: 'img/columbario-dashboard.png', label: '📊 Dashboard & Métricas' },
         { src: 'img/columbario-plano.png', label: '🗺️ Plano Interactivo & Nichos' },
         { src: 'img/columbario-login.png', label: '🔐 Acceso & Credenciales' }
       ],
       tags: ['Sistema SacroGest', 'Plano Interactivo de Nichos', 'Gestión de Difuntos & Contratos', 'Alertas de Renovación', 'Sincronización Cloud', 'UI/UX Ejecutiva'],
-      desc: 'COLUMBARIO (SacroGest) es una solución web integral creada para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A, B, C, D, E), enviar alertas inteligentes de renovación/cobro por IA, gestionar contratos administrativos e historial de difuntos inhumados.'
+      desc: 'COLUMBARIO (SacroGest) es una solución web funcional en vivo (disponible en columbario.pages.dev) creada para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A-E), notificaciones inteligentes e historial de difuntos.'
     }
   };
 
@@ -242,6 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalTitle) modalTitle.textContent = data.title;
         if (modalDesc) modalDesc.textContent = data.desc;
         if (modalImg) modalImg.src = data.images[0].src;
+
+        if (modalLiveBtn) {
+          modalLiveBtn.href = data.liveUrl;
+          modalLiveBtn.textContent = `Probar ${key.toUpperCase()} en Vivo (${data.liveUrl.replace('https://', '')})`;
+        }
 
         if (modalTags) {
           modalTags.innerHTML = data.tags.map(t => `<span class="tech-tag">${t}</span>`).join('');

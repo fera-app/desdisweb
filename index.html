@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Felix | Desarrollador y Diseñador de Aplicaciones Web | DESDISWEB</title>
-  <meta name="description" content="Portafolio profesional de Felix. Desarrollador y diseñador de aplicaciones web, plataformas SaaS ERP y sistemas a medida como FERA y SacroGest Columbario.">
-  <meta name="keywords" content="Felix, DESDISWEB, FERA, SacroGest, Columbario, Desarrollador Web, Colombia, Tocancipá, Cundinamarca, Frontend, Backend, UI/UX">
+  <title>Felix Rodriguez | Desarrollador y Diseñador de Aplicaciones Web | DESDISWEB</title>
+  <meta name="description"
+    content="Portafolio profesional de Felix Rodriguez. Desarrollador y diseñador de aplicaciones web, plataformas SaaS ERP y sistemas a medida como FERA (fera-app.pages.dev) y SacroGest Columbario (columbario.pages.dev).">
+  <meta name="keywords"
+    content="Felix, DESDISWEB, FERA, SacroGest, Columbario, Desarrollador Web, Colombia, Tocancipá, Cundinamarca, Frontend, Backend, UI/UX">
 
   <!-- Open Graph / Meta Social -->
   <meta property="og:title" content="Felix | Desarrollador y Diseñador de Aplicaciones Web">
-  <meta property="og:description" content="Descubre el portafolio de Felix. Desarrollador de aplicaciones web y plataformas complejas como FERA y SacroGest Columbario. Cotiza tu proyecto.">
+  <meta property="og:description"
+    content="Descubre el portafolio de Felix. Desarrollador de aplicaciones web y plataformas complejas como FERA y SacroGest Columbario. Cotiza tu proyecto.">
   <meta property="og:type" content="website">
 
   <!-- Preconnect Fonts -->
@@ -31,6 +35,7 @@
       border-top: 1px solid var(--border-color);
       overflow-x: auto;
     }
+
     .thumb-btn {
       flex: 1;
       min-width: 100px;
@@ -46,17 +51,21 @@
       transition: all var(--transition-fast);
       white-space: nowrap;
     }
-    .thumb-btn:hover, .thumb-btn.active-thumb {
+
+    .thumb-btn:hover,
+    .thumb-btn.active-thumb {
       background: rgba(6, 182, 212, 0.15);
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
     }
+
     .modal-gallery-bar {
       display: flex;
       gap: 0.75rem;
       margin-bottom: 1.5rem;
       overflow-x: auto;
     }
+
     .modal-thumb-btn {
       display: flex;
       align-items: center;
@@ -64,25 +73,45 @@
       padding: 0.4rem 0.8rem;
       border-radius: var(--radius-sm);
       border: 1px solid var(--border-color);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       cursor: pointer;
       font-size: 0.8rem;
       color: var(--text-muted);
       transition: all var(--transition-fast);
     }
+
     .modal-thumb-btn img {
       width: 32px;
       height: 24px;
       object-fit: cover;
       border-radius: 4px;
     }
-    .modal-thumb-btn:hover, .modal-thumb-btn.active {
+
+    .modal-thumb-btn:hover,
+    .modal-thumb-btn.active {
       border-color: var(--accent-cyan);
       background: rgba(6, 182, 212, 0.15);
       color: var(--text-main);
     }
+
+    .live-link-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .live-link-badge:hover {
+      transform: translateY(-2px);
+    }
   </style>
 </head>
+
 <body>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
@@ -128,7 +157,8 @@
         </h1>
 
         <p class="hero-description" style="max-width: 780px; margin: 0 auto 2.2rem auto;">
-          Especializado en la creación de plataformas digitales de alto rendimiento, sistemas SaaS personalizados e interfaces web de última generación. Explora abajo las capturas reales de mis aplicaciones como <strong>FERA</strong> y <strong>SacroGest Columbario</strong>.
+          Especializado en la creación de plataformas digitales de alto rendimiento, sistemas SaaS personalizados e
+          interfaces web de última generación.
         </p>
 
         <div class="hero-ctas" style="justify-content: center; margin-bottom: 3rem;">
@@ -164,23 +194,26 @@
     </div>
   </section>
 
-  <!-- ==================== PORTFOLIO SECTION (FERA & COLUMBARIO WITH REAL SCREENSHOTS) ==================== -->
+  <!-- ==================== PORTFOLIO SECTION (FERA & COLUMBARIO WITH LIVE LINKS & SCREENSHOTS) ==================== -->
   <section class="section-padding" id="proyectos">
     <div class="container">
       <div class="section-title-wrapper">
         <span class="section-tag">Portafolio Destacado</span>
-        <h2 class="section-title">Mis Proyectos Realizados: <span class="gradient-text">FERA</span> y <span class="gradient-gold">COLUMBARIO</span></h2>
+        <h2 class="section-title">Mis Proyectos Realizados: <span class="gradient-text">FERA</span> y <span
+            class="gradient-gold">COLUMBARIO</span></h2>
         <p class="section-subtitle">
-          Explora las pantallas reales de las plataformas desarrolladas: <strong>FERA (Gestión Agropecuaria Inteligente)</strong> y <strong>SacroGest (Gestión Parroquial de Columbarios)</strong>.
+          Prueba directamente en vivo las plataformas que he desarrollado y constata su funcionamiento real.
         </p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- Proyecto FERA Card con Galería Interactiva -->
+        <!-- Proyecto FERA Card con Enlace Directo en Vivo -->
         <article class="glass-card project-card">
           <div class="project-thumb-container" style="height: 260px;">
-            <img src="img/fera-dashboard.png" id="fera-main-img" alt="Pantalla real de Dashboard FERA desarrollado por Felix" class="project-thumb" style="transition: opacity 0.2s ease;">
+            <img src="img/fera-dashboard.png" id="fera-main-img"
+              alt="Pantalla real de Dashboard FERA desarrollado por Felix" class="project-thumb"
+              style="transition: opacity 0.2s ease;">
             <span class="project-badge"><i class="fa-solid fa-star"></i> SaaS ERP Boutique</span>
           </div>
 
@@ -201,26 +234,37 @@
             <span class="project-role">Realizador & Arquitecto Principal</span>
             <h3 class="project-title">Proyecto FERA - ERP Agropecuario</h3>
             <p class="project-description">
-              Sistema SaaS ERP inteligente para la gestión ganadera y producción láctea. Incluye métricas financieras en tiempo real, trazabilidad de bovinos, notificaciones automáticas y alertas.
+              Sistema SaaS ERP inteligente en vivo para la gestión ganadera y producción láctea. Incluye métricas
+              financieras en tiempo real, trazabilidad de bovinos y notificaciones.
             </p>
             <div class="project-tags">
               <span class="tech-tag">SaaS ERP Boutique</span>
               <span class="tech-tag">Dashboard Finanzas</span>
               <span class="tech-tag">Control de Bovinos</span>
               <span class="tech-tag">JavaScript ES6+</span>
-              <span class="tech-tag">UI/UX Dark Theme</span>
             </div>
-            <a href="#" class="project-link" data-project-trigger="fera">
-              Ver Capturas de FERA en HD <i class="fa-solid fa-arrow-right"></i>
-            </a>
+
+            <!-- Botones de Acción: Visitar Web en Vivo + Detalle -->
+            <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top: auto;">
+              <a href="https://fera-app.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"
+                style="padding: 0.7rem 1.2rem; font-size: 0.9rem; width: 100%;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Probar FERA en Vivo (fera-app.pages.dev)
+              </a>
+              <a href="#" class="project-link" data-project-trigger="fera" style="justify-content: center;">
+                Ver Capturas de FERA en HD <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </article>
 
-        <!-- Proyecto COLUMBARIO (SacroGest) Card con Galería Interactiva -->
+        <!-- Proyecto COLUMBARIO (SacroGest) Card con Enlace Directo en Vivo -->
         <article class="glass-card project-card">
           <div class="project-thumb-container" style="height: 260px;">
-            <img src="img/columbario-dashboard.png" id="columbario-main-img" alt="Pantalla real de SacroGest Columbario desarrollado por Felix" class="project-thumb" style="transition: opacity 0.2s ease;">
-            <span class="project-badge" style="color:var(--accent-cyan); border-color:var(--border-glow);"><i class="fa-solid fa-gem"></i> SacroGest ERP</span>
+            <img src="img/columbario-dashboard.png" id="columbario-main-img"
+              alt="Pantalla real de SacroGest Columbario desarrollado por Felix" class="project-thumb"
+              style="transition: opacity 0.2s ease;">
+            <span class="project-badge" style="color:var(--accent-cyan); border-color:var(--border-glow);"><i
+                class="fa-solid fa-gem"></i> SacroGest ERP</span>
           </div>
 
           <!-- Selector de Pantallas Reales COLUMBARIO -->
@@ -240,18 +284,26 @@
             <span class="project-role">Desarrollador & UI Specialist</span>
             <h3 class="project-title">COLUMBARIO - SacroGest Parroquial</h3>
             <p class="project-description">
-              Plataforma web avanzada para la Parroquia Divino Redentor. Incorpora un mapa/plano interactivo de nichos por módulos, gestión de difuntos inhumados, alertas de renovación con IA y contratos.
+              Plataforma web avanzada en vivo creada para la Parroquia Divino Redentor. Incorpora mapa/plano interactivo
+              de nichos por módulos, gestión de difuntos y alertas por IA.
             </p>
             <div class="project-tags">
               <span class="tech-tag">Plano Interactivo</span>
               <span class="tech-tag">Gestión de Nichos</span>
-              <span class="tech-tag">Alertas de Renovación</span>
+              <span class="tech-tag">Alertas Renovación</span>
               <span class="tech-tag">Supabase Cloud</span>
-              <span class="tech-tag">UI/UX Ejecutiva</span>
             </div>
-            <a href="#" class="project-link" data-project-trigger="columbario">
-              Ver Capturas de COLUMBARIO en HD <i class="fa-solid fa-arrow-right"></i>
-            </a>
+
+            <!-- Botones de Acción: Visitar Web en Vivo + Detalle -->
+            <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top: auto;">
+              <a href="https://columbario.pages.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="padding: 0.7rem 1.2rem; font-size: 0.9rem; width: 100%;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar COLUMBARIO en Vivo (columbario.pages.dev)
+              </a>
+              <a href="#" class="project-link" data-project-trigger="columbario" style="justify-content: center;">
+                Ver Capturas de COLUMBARIO en HD <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -259,24 +311,35 @@
     </div>
   </section>
 
-  <!-- ==================== SHOWCASE TÉCNICO DE FERA & COLUMBARIO ==================== -->
-  <section class="section-padding" style="background: rgba(15, 23, 42, 0.6); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+  <!-- ==================== SHOWCASE TÉCNICO CON LINKS DIRECTOS ==================== -->
+  <section class="section-padding"
+    style="background: rgba(15, 23, 42, 0.6); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
     <div class="container">
       <div class="section-title-wrapper">
-        <span class="section-tag">Demostración de Módulos Reales</span>
-        <h2 class="section-title">Interfaces de <span class="gradient-gold">FERA</span> y <span class="gradient-text">COLUMBARIO</span></h2>
+        <span class="section-tag">Demostración & Enlaces Oficiales</span>
+        <h2 class="section-title">Constata el Funcionamiento de Mis Aplicaciones</h2>
         <p class="section-subtitle">
-          Muestras reales de la complejidad y refinamiento visual de las aplicaciones construidas.
+          Puedes visitar las aplicaciones desplegadas en la web y explorar cada una de sus funciones.
         </p>
       </div>
 
       <!-- Módulos FERA -->
-      <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:1.5rem; color:var(--accent-emerald);">
-        <i class="fa-solid fa-leaf"></i> Sistema FERA - Gestión Ganadera
-      </h3>
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-emerald);">
+          <i class="fa-solid fa-leaf"></i> Sistema FERA - Gestión Ganadera
+        </h3>
+        <a href="https://fera-app.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge"
+          style="background:rgba(16,185,129,0.15); border:1px solid var(--accent-emerald); color:var(--accent-emerald);">
+          <i class="fa-solid fa-globe"></i> Visitar fera-app.pages.dev <i
+            class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
       <div class="services-grid" style="margin-bottom:3.5rem;">
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/fera-login.png" alt="Pantalla Login FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/fera-login.png" alt="Pantalla Login FERA"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-emerald);">
               Autenticación ERP Boutique
@@ -288,7 +351,8 @@
         </div>
 
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/fera-dashboard.png" alt="Pantalla Dashboard FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/fera-dashboard.png" alt="Pantalla Dashboard FERA"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-cyan);">
               Dashboard & Finanzas
@@ -300,7 +364,8 @@
         </div>
 
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/fera-bovinos.png" alt="Pantalla Bovinos FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/fera-bovinos.png" alt="Pantalla Bovinos FERA"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-amber);">
               Trazabilidad de Ganado
@@ -313,12 +378,22 @@
       </div>
 
       <!-- Módulos COLUMBARIO (SacroGest) -->
-      <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:1.5rem; color:var(--accent-cyan);">
-        <i class="fa-solid fa-church"></i> Sistema COLUMBARIO - SacroGest Parroquial
-      </h3>
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-cyan);">
+          <i class="fa-solid fa-church"></i> Sistema COLUMBARIO - SacroGest Parroquial
+        </h3>
+        <a href="https://columbario.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge"
+          style="background:rgba(6,182,212,0.15); border:1px solid var(--accent-cyan); color:var(--accent-cyan);">
+          <i class="fa-solid fa-globe"></i> Visitar columbario.pages.dev <i
+            class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
       <div class="services-grid">
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/columbario-dashboard.png" alt="Dashboard SacroGest Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/columbario-dashboard.png" alt="Dashboard SacroGest Columbario"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-cyan);">
               Dashboard de Métricas & Alertas
@@ -330,7 +405,8 @@
         </div>
 
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/columbario-plano.png" alt="Plano Interactivo Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/columbario-plano.png" alt="Plano Interactivo Columbario"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-indigo);">
               Plano Interactivo de Nichos
@@ -342,7 +418,8 @@
         </div>
 
         <div class="glass-card" style="overflow:hidden;">
-          <img src="img/columbario-login.png" alt="Acceso SacroGest Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <img src="img/columbario-login.png" alt="Acceso SacroGest Columbario"
+            style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
             <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-emerald);">
               Acceso Parroquial SacroGest
@@ -365,10 +442,14 @@
           <span class="section-tag">Desarrollador & Creador</span>
           <h2 class="section-title">Sobre <span class="gradient-text">Felix</span> y DESDISWEB</h2>
           <p style="color:var(--text-muted); line-height:1.7; margin-bottom:1.2rem;">
-            Soy un apasionado desarrollador de software y diseñador de aplicaciones web radicado en Tocancipá, Cundinamarca (Colombia). A través de <strong>DESDISWEB</strong>, construyo herramientas web de alto rendimiento y diseño personalizado.
+            Soy un apasionado desarrollador de software y diseñador de aplicaciones web radicado en Tocancipá,
+            Cundinamarca (Colombia). A través de <strong>DESDISWEB</strong>, construyo herramientas web de alto
+            rendimiento y diseño personalizado.
           </p>
           <p style="color:var(--text-muted); line-height:1.7; margin-bottom:1.5rem;">
-            Haber diseñado y programado sistemas integrales como <strong>FERA</strong> y <strong>SacroGest Columbario</strong> respalda mi capacidad técnica para resolver cualquier necesidad digital de tu empresa o negocio.
+            Haber diseñado y programado aplicaciones web funcionales en vivo como <strong>FERA
+              (fera-app.pages.dev)</strong> y <strong>SacroGest Columbario (columbario.pages.dev)</strong> respalda mi
+            capacidad técnica para resolver cualquier necesidad digital de tu empresa o negocio.
           </p>
           <div style="display:flex; gap:1.5rem; flex-wrap:wrap;">
             <div style="display:flex; align-items:center; gap:0.5rem; color:var(--text-main); font-weight:700;">
@@ -384,10 +465,12 @@
         </div>
 
         <div class="glass-card" style="padding:2.5rem; text-align:center;">
-          <i class="fa-solid fa-laptop-code" style="font-size:3.5rem; color:var(--accent-cyan); margin-bottom:1rem;"></i>
+          <i class="fa-solid fa-laptop-code"
+            style="font-size:3.5rem; color:var(--accent-cyan); margin-bottom:1rem;"></i>
           <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">¿Tienes un proyecto en mente?</h3>
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
-            Puedo ayudarte a diseñar y desarrollar tu nueva aplicación web con la misma calidad y precisión demostrada en mis proyectos.
+            Puedo ayudarte a diseñar y desarrollar tu nueva aplicación web con la misma calidad y precisión demostrada
+            en mis proyectos en vivo.
           </p>
           <a href="#cotizador" class="btn btn-primary" style="width:100%;">
             <i class="fa-solid fa-calculator"></i> Calcular Presupuesto de Mi Aplicación
@@ -415,37 +498,43 @@
           </div>
           <h3 class="service-title">Arquitectura & Sitios Web</h3>
           <p class="service-desc">
-            Diseño e implementación de sitios web corporativos completos con Home, galería, contacto, blog y navegación responsiva.
+            Diseño e implementación de sitios web corporativos completos con Home, galería, contacto, blog y navegación
+            responsiva.
           </p>
         </div>
 
         <div class="glass-card service-card">
-          <div class="service-icon-wrapper" style="color:var(--accent-emerald); border-color:rgba(16,185,129,0.4); background:rgba(16,185,129,0.12);">
+          <div class="service-icon-wrapper"
+            style="color:var(--accent-emerald); border-color:rgba(16,185,129,0.4); background:rgba(16,185,129,0.12);">
             <i class="fa-solid fa-bullseye"></i>
           </div>
           <h3 class="service-title">Landing Pages de Ventas</h3>
           <p class="service-desc">
-            Páginas de aterrizaje de alta conversión para lanzar productos o campañas con integración directa a WhatsApp.
+            Páginas de aterrizaje de alta conversión para lanzar productos o campañas con integración directa a
+            WhatsApp.
           </p>
         </div>
 
         <div class="glass-card service-card">
-          <div class="service-icon-wrapper" style="color:var(--accent-amber); border-color:rgba(245,158,11,0.4); background:rgba(245,158,11,0.12);">
+          <div class="service-icon-wrapper"
+            style="color:var(--accent-amber); border-color:rgba(245,158,11,0.4); background:rgba(245,158,11,0.12);">
             <i class="fa-solid fa-gauge-high"></i>
           </div>
           <h3 class="service-title">Optimización & SEO</h3>
           <p class="service-desc">
             Mejora drástica de la velocidad de carga (PageSpeed < 1s), posicionamiento orgánico en Google y SEO técnico.
-          </p>
+              </p>
         </div>
 
         <div class="glass-card service-card">
-          <div class="service-icon-wrapper" style="color:var(--accent-indigo); border-color:rgba(99,102,241,0.4); background:rgba(99,102,241,0.12);">
+          <div class="service-icon-wrapper"
+            style="color:var(--accent-indigo); border-color:rgba(99,102,241,0.4); background:rgba(99,102,241,0.12);">
             <i class="fa-solid fa-gears"></i>
           </div>
           <h3 class="service-title">Aplicaciones Web a Medida</h3>
           <p class="service-desc">
-            Desarrollo de sistemas interactivos, ERPs, cotizadores y módulos administrables personalizados tipo FERA o SacroGest.
+            Desarrollo de sistemas interactivos, ERPs, cotizadores y módulos administrables personalizados tipo FERA o
+            SacroGest.
           </p>
         </div>
       </div>
@@ -469,15 +558,18 @@
             <div class="calc-group-title">1. Selecciona el Tipo de Proyecto</div>
             <div class="calc-options-grid">
               <div class="calc-option-card selected" data-calc-type="landing" data-price="250">
-                <div class="calc-option-name"><i class="fa-solid fa-rocket" style="color:var(--accent-cyan);"></i> Landing Page</div>
+                <div class="calc-option-name"><i class="fa-solid fa-rocket" style="color:var(--accent-cyan);"></i>
+                  Landing Page</div>
                 <div class="calc-option-desc">Ideal para ventas rápidas o campañas específicas.</div>
               </div>
               <div class="calc-option-card" data-calc-type="corporate" data-price="450">
-                <div class="calc-option-name"><i class="fa-solid fa-building" style="color:var(--accent-emerald);"></i> Web Corporativa</div>
+                <div class="calc-option-name"><i class="fa-solid fa-building" style="color:var(--accent-emerald);"></i>
+                  Web Corporativa</div>
                 <div class="calc-option-desc">Multipágina profesional con secciones completas.</div>
               </div>
               <div class="calc-option-card" data-calc-type="custom" data-price="700">
-                <div class="calc-option-name"><i class="fa-solid fa-code" style="color:var(--accent-amber);"></i> Aplicación a Medida</div>
+                <div class="calc-option-name"><i class="fa-solid fa-code" style="color:var(--accent-amber);"></i>
+                  Aplicación a Medida</div>
                 <div class="calc-option-desc">Sistema avanzado tipo FERA o SacroGest.</div>
               </div>
             </div>
@@ -485,15 +577,18 @@
             <div class="calc-group-title">2. Módulos Adicionales (Opcional)</div>
             <div class="calc-options-grid">
               <div class="calc-option-card" data-calc-addon="whatsapp" data-price="50">
-                <div class="calc-option-name"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Widget WhatsApp Pro</div>
+                <div class="calc-option-name"><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Widget
+                  WhatsApp Pro</div>
                 <div class="calc-option-desc">Botón flotante con mensajes inteligentes.</div>
               </div>
               <div class="calc-option-card" data-calc-addon="seo" data-price="100">
-                <div class="calc-option-name"><i class="fa-solid fa-magnifying-glass" style="color:var(--accent-cyan);"></i> SEO Avanzado Google</div>
+                <div class="calc-option-name"><i class="fa-solid fa-magnifying-glass"
+                    style="color:var(--accent-cyan);"></i> SEO Avanzado Google</div>
                 <div class="calc-option-desc">Indexación y estructuración de meta tags.</div>
               </div>
               <div class="calc-option-card" data-calc-addon="speed" data-price="80">
-                <div class="calc-option-name"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Carga Ultra-Rápida</div>
+                <div class="calc-option-name"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Carga
+                  Ultra-Rápida</div>
                 <div class="calc-option-desc">Compresión WebP, CDN y minificación.</div>
               </div>
             </div>
@@ -515,10 +610,11 @@
             <div>
               <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Resumen de tu Cotización</h3>
               <p style="color:var(--text-muted); font-size:0.85rem;">Estimación calculada automáticamente:</p>
-              
+
               <div class="price-display" id="total-price">$250 USD</div>
-              
-              <div id="selected-summary" style="font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.5rem;">
+
+              <div id="selected-summary"
+                style="font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.5rem;">
                 • Proyecto: Landing Page<br>
                 • Tiempo: Estándar
               </div>
@@ -548,17 +644,19 @@
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Una Landing Page suele estar lista entre 3 a 5 días hábiles. Un sitio web corporativo o aplicación web personalizada (tipo FERA o SacroGest) requiere entre 7 a 15 días hábiles según los requerimientos.
+            Una Landing Page suele estar lista entre 3 a 5 días hábiles. Un sitio web corporativo o aplicación web
+            personalizada (tipo FERA o SacroGest) requiere entre 7 a 15 días hábiles según los requerimientos.
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>¿Puedo ver las capturas reales de tus aplicaciones?</span>
+            <span>¿Puedo probar las aplicaciones reales en vivo?</span>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            ¡Por supuesto! En la sección de portafolio puedes interactuar directamente con las capturas reales de **FERA** (Login, Dashboard y Bovinos) y **SacroGest Columbario** (Dashboard, Plano Interactivo y Login).
+            ¡Por supuesto! En la sección de portafolio encuentras los botones directos para visitar **FERA en vivo
+            (fera-app.pages.dev)** y **SacroGest Columbario en vivo (columbario.pages.dev)**.
           </div>
         </div>
 
@@ -568,7 +666,8 @@
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Sí, todos mis desarrollos incluyen garantía y soporte técnico directo para asegurar el funcionamiento óptimo de tu plataforma.
+            Sí, todos mis desarrollos incluyen garantía y soporte técnico directo para asegurar el funcionamiento óptimo
+            de tu plataforma.
           </div>
         </div>
       </div>
@@ -583,12 +682,14 @@
           <span class="section-tag">Contacto Directo</span>
           <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
           <p style="color:var(--text-muted); margin-bottom:2rem;">
-            Estoy listo para desarrollar tu aplicación o sitio web. Escríbeme y analicemos tu idea sin ningún compromiso.
+            Estoy listo para desarrollar tu aplicación o sitio web. Escríbeme y analicemos tu idea sin ningún
+            compromiso.
           </p>
 
           <div style="display:flex; flex-direction:column; gap:1.5rem;">
             <div style="display:flex; align-items:center; gap:1rem;">
-              <div style="width:50px; height:50px; border-radius:12px; background:rgba(6,182,212,0.12); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); font-size:1.3rem;">
+              <div
+                style="width:50px; height:50px; border-radius:12px; background:rgba(6,182,212,0.12); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); font-size:1.3rem;">
                 <i class="fa-solid fa-user-gear"></i>
               </div>
               <div>
@@ -598,7 +699,8 @@
             </div>
 
             <div style="display:flex; align-items:center; gap:1rem;">
-              <div style="width:50px; height:50px; border-radius:12px; background:rgba(16,185,129,0.12); display:flex; align-items:center; justify-content:center; color:var(--accent-emerald); font-size:1.3rem;">
+              <div
+                style="width:50px; height:50px; border-radius:12px; background:rgba(16,185,129,0.12); display:flex; align-items:center; justify-content:center; color:var(--accent-emerald); font-size:1.3rem;">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <div>
@@ -623,7 +725,8 @@
 
             <div class="form-group">
               <label for="form-message">Cuéntame sobre tu proyecto</label>
-              <textarea id="form-message" class="form-control" placeholder="Hola Felix, me gustaría desarrollar una aplicación web..."></textarea>
+              <textarea id="form-message" class="form-control"
+                placeholder="Hola Felix, me gustaría desarrollar una aplicación web..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
@@ -660,47 +763,61 @@
         </div>
 
         <div>
-          <h4 style="color:var(--text-main); font-weight:700; margin-bottom:1rem;">Proyectos</h4>
+          <h4 style="color:var(--text-main); font-weight:700; margin-bottom:1rem;">Proyectos en Vivo</h4>
           <ul style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem;">
-            <li><a href="#" data-project-trigger="fera">Proyecto FERA</a></li>
-            <li><a href="#" data-project-trigger="columbario">Proyecto COLUMBARIO</a></li>
+            <li><a href="https://fera-app.pages.dev" target="_blank" rel="noopener noreferrer">FERA
+                (fera-app.pages.dev)</a></li>
+            <li><a href="https://columbario.pages.dev" target="_blank" rel="noopener noreferrer">COLUMBARIO
+                (columbario.pages.dev)</a></li>
           </ul>
         </div>
       </div>
 
-      <div style="border-top:1px solid var(--border-color); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:0.85rem;">
+      <div
+        style="border-top:1px solid var(--border-color); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:0.85rem;">
         <p>&copy; 2026 DESDISWEB. Desarrollado por Felix (cratire). Todos los derechos reservados.</p>
-        <p><i class="fa-solid fa-location-dot" style="color:var(--accent-cyan);"></i> Tocancipá, Cundinamarca, Colombia</p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--accent-cyan);"></i> Tocancipá, Cundinamarca, Colombia
+        </p>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/573000000000?text=Hola%20Felix,%20vi%20tu%20portafolio%20de%20aplicaciones%20web%20y%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+  <a href="https://wa.me/573000000000?text=Hola%20Felix,%20vi%20tu%20portafolio%20de%20aplicaciones%20web%20y%20quiero%20cotizar%20un%20proyecto"
+    class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="whatsapp-badge">1</span>
   </a>
 
-  <!-- PROJECT DETAILS MODAL CON GALERÍA DE CAPTURAS REALES -->
-  <div id="project-modal" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:1.5rem;">
-    <div class="glass-card" style="max-width:800px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; background:var(--bg-dark); border-color:var(--accent-cyan);">
-      <button id="modal-close" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:var(--text-main); font-size:1.5rem; cursor:pointer;">
+  <!-- PROJECT DETAILS MODAL CON ENLACES EN VIVO -->
+  <div id="project-modal"
+    style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:1.5rem;">
+    <div class="glass-card"
+      style="max-width:800px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; background:var(--bg-dark); border-color:var(--accent-cyan);">
+      <button id="modal-close"
+        style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:var(--text-main); font-size:1.5rem; cursor:pointer;">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <img id="modal-img" src="" alt="Project Preview" style="border-radius:var(--radius-md); margin-bottom:1rem; width:100%; height:340px; object-fit:cover; border:1px solid var(--border-color);">
-      
+      <img id="modal-img" src="" alt="Project Preview"
+        style="border-radius:var(--radius-md); margin-bottom:1rem; width:100%; height:340px; object-fit:cover; border:1px solid var(--border-color);">
+
       <!-- Selector de Galería dentro del Modal -->
       <div id="modal-gallery" class="modal-gallery-bar"></div>
 
-      <h3 id="modal-title" style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;"></h3>
-      
+      <h3 id="modal-title"
+        style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;"></h3>
+
       <div id="modal-tags" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem;"></div>
-      
+
       <p id="modal-desc" style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:1.5rem;"></p>
-      
-      <div style="display:flex; gap:1rem; justify-content:flex-end;">
-        <a href="#cotizador" class="btn btn-primary" onclick="document.getElementById('project-modal').style.display='none';">
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:flex-end;">
+        <a id="modal-live-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Aplicación en Vivo
+        </a>
+        <a href="#cotizador" class="btn btn-primary"
+          onclick="document.getElementById('project-modal').style.display='none';">
           <i class="fa-solid fa-rocket"></i> Cotizar Aplicación Similar
         </a>
       </div>
@@ -710,4 +827,5 @@
   <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
