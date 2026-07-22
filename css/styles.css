@@ -334,10 +334,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1.2rem;
+  line-height: 1.3;
 }
 
 .hero-description {
@@ -903,7 +904,7 @@ textarea.form-control {
   }
 
   .hero-title {
-    font-size: 2.1rem;
+    font-size: 1.65rem;
   }
 
   .calculator-container {
