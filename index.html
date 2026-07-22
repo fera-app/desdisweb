@@ -1,443 +1,687 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESDISWEB</title>
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DESDISWEB | Desarrollo & Diseño Web de Alta Conversión - Felix</title>
+  <meta name="description" content="Desarrollador y diseñador web profesional. Creo páginas web ultra-rápidas, personalizadas y optimizadas para convertir visitantes en clientes reales.">
+  <meta name="keywords" content="Desarrollo Web, Diseño Web, Landing Page, SEO, Tocancipá, Cundinamarca, Colombia, FERA, Columbario">
 
-  <body>
-    <header>
-      <h1 class="titulo">DESDISWEB</h1>
-    </header>
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:title" content="DESDISWEB | Desarrollo & Diseño Web de Alta Conversión">
+  <meta property="og:description" content="Potencia tu negocio con un sitio web moderno, rápido y diseñado para vender. Cotiza tu proyecto en línea en segundos.">
+  <meta property="og:type" content="website">
 
-    <div class="nav-bg">
-      <nav class="navegacion-principal contenedor">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Inicio</a>
-        <a class="navegacion__enlace" href="quiensoy.html">Quien Soy</a>
-        <a class="navegacion__enlace" href="servicios.html">Servicios</a>
-        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="navbar-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <i class="fa-solid fa-code"></i>
+        <span>DESDIS<span class="gradient-text">WEB</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#proyectos" class="nav-link">Portafolio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#cotizador" class="nav-link">Cotizador</a>
+        <a href="#proceso" class="nav-link">Proceso</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
       </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#cotizador" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+          <i class="fa-solid fa-calculator"></i> Cotizar Web
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <section class="portada">
-      <div class="contenido-portada">
-        <h2>Desarrollo y Diseño Web</h2>
-        <div class="ubicacion">
-          <svg
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>  <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>
-            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/>
-          </svg>
-          <p>Tocancipá,Cundinamarca</p>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Disponible para proyectos este mes</span>
         </div>
-        <a class="boton" href="contacto.html">Contactar</a>
-      </div>
 
-      <div class="wave wave1"></div>
-      <div class="wave wave2"></div>
-      <div class="wave wave3"></div>
+        <h1 class="hero-title">
+          Transformo ideas en sitios web de <span class="gradient-text">alta conversión</span> que atraen y venden 24/7
+        </h1>
 
-      <div class="fas fa-cog nut1"></div>
-      <div class="fas fa-cog nut2"></div>
+        <p class="hero-description">
+          Soy <strong>Felix</strong>, creador de <strong>DESDISWEB</strong>. Ayudo a emprendedores, empresas y profesionales a destacar con páginas web modernas, ultra-rápidas, responsivas y totalmente optimizadas para Google.
+        </p>
 
+        <div class="hero-ctas">
+          <a href="#cotizador" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.3rem;"></i> Cotizar por WhatsApp
+          </a>
+          <a href="#proyectos" class="btn btn-outline">
+            <i class="fa-solid fa-rocket"></i> Ver Proyectos Destacados
+          </a>
+        </div>
 
-
-
-    </section>
-
-    <main class="contenedor sombra">
-      <div id="servicios">
-        <h2>Beneficios y características que tendrá tu página web</h2>
-
-        <div class="servicios">
-          <section class="servicio contenedor sombra">
-            <h3>Arquitectura Web</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-puzzle"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                />
-              </svg>
-            </div>
-            <p>
-              Tendrá su respectiva Home, galería, zona de contacto, blog de
-              noticias o notas corporativas, y demás..
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>Módulo Red Social</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-                />
-                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M16.5 7.5l0 .01" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                <path
-                  d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
-                />
-              </svg>
-            </div>
-            <p>
-              Se pondrán tus perfiles de redes sociales en el portal online para
-              que te sigan y así aumentar el engagement.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>Analítica Web</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-device-analytics"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 4m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"
-                />
-                <path d="M7 20l10 0" />
-                <path d="M9 16l0 4" />
-                <path d="M15 16l0 4" />
-                <path d="M8 12l3 -3l2 2l3 -3" />
-              </svg>
-            </div>
-            <p>
-              A toda hora sabrás la cantidad de personas que te están visitando
-              y las horas que más tráfico impactan a tu sitio.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>SEO</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-seo"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M7 8h-3a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-3"
-                />
-                <path d="M14 16h-4v-8h4" />
-                <path d="M11 12h2" />
-                <path
-                  d="M17 8m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
-                />
-              </svg>
-            </div>
-            <p>
-              Tu web cumplirá altos estándares y estará lista para posicionarse
-              en buscadores como Google, Bing y Yahoo.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>Asesoría en Redacción</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-writing-sign"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 19c3.333 -2 5 -4 5 -6c0 -3 -1 -3 -2 -3s-2.032 1.085 -2 3c.034 2.048 1.658 2.877 2.5 4c1.5 2 2.5 2.5 3.5 1c.667 -1 1.167 -1.833 1.5 -2.5c1 2.333 2.333 3.5 4 3.5h2.5"
-                />
-                <path
-                  d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z"
-                />
-                <path d="M16 7h4" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path
-                  d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-                />
-                <path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" />
-              </svg>
-            </div>
-            <p>
-              Si no sabes qué incluir en tu página, te asesoraremos sobre cómo
-              elaborar los textos, te enseñaremos cómo mostrarte de manera
-              interesante.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>Soporte 24/7</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-clock-24"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 12a9 9 0 0 0 5.998 8.485m12.002 -8.485a9 9 0 1 0 -18 0"
-                />
-                <path d="M12 7v5" />
-                <path
-                  d="M12 15h2a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-1a1 1 0 0 0 -1 1v1a1 1 0 0 0 1 1h2"
-                />
-                <path d="M18 15v2a1 1 0 0 0 1 1h1" />
-                <path d="M21 15v6" />
-              </svg>
-            </div>
-            <p>
-              Las 24 horas del día y los 7 días de la semana, nos encargaremos
-              de que tu web esté siempre disponible sin errores.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>Seguridad Certificada</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-lock"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
-                />
-                <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-                <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-certificate"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
-                <path
-                  d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"
-                />
-                <path d="M6 9l12 0" />
-                <path d="M6 12l3 0" />
-                <path d="M6 15l2 0" />
-              </svg>
-            </div>
-            <p>
-              Contará con protocolo criptográfico SSL, toda tu información
-              estará siempre segura y la de tus visitantes también.
-            </p>
-          </section>
-
-          <section class="servicio contenedor sombra">
-            <h3>eMail Marketing</h3>
-            <div class="iconos">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-                />
-                <path d="M3 7l9 6l9 -6" />
-              </svg>
-            </div>
-            <p>
-              Podemos configurar tus campañas de suscripción para que cuando te
-              visiten registren sus correos electrónicos y programar
-              autorespuestas.
-            </p>
-          </section>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Diseño Adaptable</p>
+          </div>
+          <div class="stat-item">
+            <h4>&lt; 1s</h4>
+            <p>Velocidad Óptima</p>
+          </div>
+          <div class="stat-item">
+            <h4>24/7</h4>
+            <p>Soporte & Garantía</p>
+          </div>
         </div>
       </div>
 
-      <div id="contacto">
-        <section>
-          <h2>Contacto</h2>
-
-          <form
-            class="formulario"
-            action="https://formsubmit.co/af332751874c40db2ce10aa0083459f5"
-            method="POST"
-          >
-            <fieldset>
-              <legend>Déjame tus datos y te contactaré</legend>
-
-              <div class="contenedor-campos">
-                <div class="campo">
-                  <label>Nombre</label>
-                  <input class="input-text" type="text" name="name" placeholder="Tu Nombre">
-                </div>
-
-                <div class="campo">
-                  <label>Teléfono</label>
-                  <input class="input-text" type="tel" name="phone" placeholder="Tu Teléfono">
-                </div>
-
-                <div class="campo">
-                  <label>Correo</label>
-                  <input class="input-text" type="email" name="email" placeholder="Tu Email">
-                </div>
-
-                <div class="campo">
-                  <label>Mensaje</label>
-                  <textarea name="comments" class="input-text"></textarea>
-                </div>
+      <!-- Hero Visual Card -->
+      <div class="hero-visual">
+        <div class="visual-card-wrapper glass-card">
+          <div class="visual-card-inner">
+            <div class="code-preview-header">
+              <div class="dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
               </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-family: monospace;">desdisweb.config.js</span>
+            </div>
 
-              <div class="alinear-derecha flex">
-                <div class="enviar">
-                  <input class="boton w-sm-100" type="submit" value="Enviar">
-                </div>
-              </div>
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="http://127.0.0.1:5500/desdisweb/index.html">
-            </fieldset>
-          </form>
-        </section>
+            <div style="padding: 1rem 0; font-family: monospace; font-size: 0.85rem; color: #a5f3fc;">
+              <p><span style="color:#f472b6;">const</span> <span style="color:#38bdf8;">experienciaWeb</span> = {</p>
+              <p style="padding-left:1.5rem;"><span style="color:#fbbf24;">diseno:</span> <span style="color:#a7f3d0;">"Moderno & Elegante"</span>,</p>
+              <p style="padding-left:1.5rem;"><span style="color:#fbbf24;">velocidad:</span> <span style="color:#a7f3d0;">"Récord Ultra-rápido"</span>,</p>
+              <p style="padding-left:1.5rem;"><span style="color:#fbbf24;">conversion:</span> <span style="color:#a7f3d0;">"Optimizada para Ventas"</span>,</p>
+              <p style="padding-left:1.5rem;"><span style="color:#fbbf24;">proyectosDestacados:</span> [<span style="color:#a7f3d0;">"FERA"</span>, <span style="color:#a7f3d0;">"COLUMBARIO"</span>]</p>
+              <p>};</p>
+            </div>
+
+            <div class="tech-badges">
+              <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5/CSS3</span>
+              <span class="tech-badge"><i class="fa-brands fa-square-js"></i> JS Moderno</span>
+              <span class="tech-badge"><i class="fa-solid fa-bolt"></i> Carga Rápida</span>
+              <span class="tech-badge"><i class="fa-solid fa-magnifying-glass"></i> SEO Posicionamiento</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <a href="https://api.whatsapp.com/send?phone=573156000174&text=Hola%F0%9F%91%8B%F0%9F%8F%BB,%20me%20gustaria%20obtener%20m%C3%A1s%20informaci%C3%B3n." class="btn-wsp" target="_blank">
-      <i class="fa fa-whatsapp icono"></i>
-    </a>
+  <!-- ==================== PORTFOLIO / CASOS DE ÉXITO (FERA & COLUMBARIO) ==================== -->
+  <section class="section-padding" id="proyectos" style="position: relative;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Portafolio de Éxito</span>
+        <h2 class="section-title">Proyectos Destacados que marcan la diferencia</h2>
+        <p class="section-subtitle">Conoce los trabajos desarrollados con los más altos estándares de calidad, velocidad e impacto visual.</p>
+      </div>
 
-    <footer class="footer">
-      <p>
-        Todos los derechos reservados, <span>DESDISWEB</span><br>
-        © Al navegar por este sitio web acepta nuestra
-        <a class="footer" href="politicas.html">Política de Privacidad y Cookies.</a>
-      </p>
-    </footer>
-  </body>
+      <div class="portfolio-grid">
+        
+        <!-- PROYECTO 1: FERA -->
+        <article class="glass-card project-card">
+          <div class="project-thumb">
+            <img src="img/fera.png" alt="Proyecto FERA" loading="lazy">
+            <div class="project-overlay">
+              <a href="#" class="btn btn-primary" data-project-trigger="fera">
+                <i class="fa-solid fa-eye"></i> Ver Detalles del Proyecto
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-featured-tag"><i class="fa-solid fa-star"></i> Caso de Éxito Insignia</span>
+            <h3 class="project-title">Proyecto FERA</h3>
+            <p class="project-description">
+              Plataforma web con diseño responsivo de alto rendimiento, interfaz limpia y navegación optimizada para captar clientes e impulsar el engagement digital.
+            </p>
+            <div class="project-tags">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Desarrollo Web</span>
+              <span class="tag">Mobile First</span>
+              <span class="tag">SEO Ready</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fa-solid fa-check-circle" style="color:var(--accent-emerald);"></i> 100% Personalizado</span>
+              <a href="#" class="link-btn" data-project-trigger="fera">
+                Conocer más <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: COLUMBARIO -->
+        <article class="glass-card project-card">
+          <div class="project-thumb">
+            <img src="img/columbario.png" alt="Proyecto COLUMBARIO" loading="lazy">
+            <div class="project-overlay">
+              <a href="#" class="btn btn-primary" data-project-trigger="columbario">
+                <i class="fa-solid fa-eye"></i> Ver Detalles del Proyecto
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-featured-tag"><i class="fa-solid fa-star"></i> Sistema & Web Corporativa</span>
+            <h3 class="project-title">Proyecto COLUMBARIO</h3>
+            <p class="project-description">
+              Solución web integral enfocada en la estructuración clara de la información, seguridad, usabilidad intuitiva y presentación profesional de servicios.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Arquitectura Web</span>
+              <span class="tag">Sistema de Información</span>
+              <span class="tag">Usabilidad Avanzada</span>
+            </div>
+            <div class="project-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fa-solid fa-check-circle" style="color:var(--accent-emerald);"></i> Altamente Escusable</span>
+              <a href="#" class="link-btn" data-project-trigger="columbario">
+                Conocer más <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICIOS ORIENTADOS A RESULTADOS ==================== -->
+  <section class="section-padding" id="servicios" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-cubes"></i> Lo que hago por tu negocio</span>
+        <h2 class="section-title">Servicios Diseñados para hacer crecer tu marca</h2>
+        <p class="section-subtitle">Cada proyecto se construye con las tecnologías más modernas del mercado, garantizando seguridad, velocidad y altas conversiones.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <div class="glass-card service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3 class="service-title">Landing Pages de Alta Conversión</h3>
+          <p class="service-desc">
+            Páginas de aterrizaje enfocadas en un solo objetivo: convertir tus visitantes en clientes potenciales o ventas directas por WhatsApp.
+          </p>
+          <div class="service-features">
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Botones directos a WhatsApp & Llamadas</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Diseño persuasivo Copywriting</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Carga ultra-rápida (&lt; 1 seg)</div>
+          </div>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h3 class="service-title">Sitios Web Corporativos</h3>
+          <p class="service-desc">
+            Webs empresariales multi-sección que reflejan la profesionalidad de tu marca, posicionan tu empresa y generan confianza inmediata.
+          </p>
+          <div class="service-features">
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Secciones de Inicio, Quiénes Somos, Servicios</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Optimización SEO para aparecer en Google</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Catálogos de productos/servicios</div>
+          </div>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3 class="service-title">Rediseño & Optimización SEO</h3>
+          <p class="service-desc">
+            ¿Tu sitio web actual es lento o antiguo? Lo transformo en una plataforma moderna, veloz y lista para posicionar en los primeros lugares.
+          </p>
+          <div class="service-features">
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Modernización visual completa</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Corrección de problemas de carga</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Adaptación 100% móvil</div>
+          </div>
+        </div>
+
+        <div class="glass-card service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="service-title">Mantenimiento & Soporte Técnico</h3>
+          <p class="service-desc">
+            Nos encargamos del servidor, dominio, certificados de seguridad SSL y actualizaciones continuas para que tú solo te preocupes por vender.
+          </p>
+          <div class="service-features">
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Monitoreo de seguridad 24/7</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Copias de seguridad periódicas</div>
+            <div class="service-feature-item"><i class="fa-solid fa-check"></i> Asistencia personalizada por WhatsApp</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COTIZADOR INTERACTIVO (LEAD MAGNET) ==================== -->
+  <section class="section-padding" id="cotizador">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-calculator"></i> Calculadora en Tiempo Real</span>
+        <h2 class="section-title">Calcula el Presupuesto de tu Web al Instante</h2>
+        <p class="section-subtitle">Selecciona las opciones que necesitas y obtén un estimado claro sin sorpresas ni costos ocultos.</p>
+      </div>
+
+      <div class="glass-card calculator-container">
+        
+        <!-- STEP 1 -->
+        <div class="calc-step-title">
+          <span>1</span> Selecciona el Tipo de Sitio Web
+        </div>
+        <div class="calc-options-grid">
+          <div class="calc-option selected" data-calc-type="landing">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Landing Page de Venta</span>
+              <i class="fa-solid fa-circle-check" style="color:var(--accent-cyan);"></i>
+            </div>
+            <span class="calc-option-desc">1 página de alta conversión enfocada en vender un producto o servicio específico.</span>
+          </div>
+
+          <div class="calc-option" data-calc-type="corp">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Sitio Web Corporativo</span>
+              <i class="fa-solid fa-circle-check" style="color:var(--accent-cyan);"></i>
+            </div>
+            <span class="calc-option-desc">Multi-sección (Inicio, Empresa, Servicios, Contacto) para dar máxima autoridad.</span>
+          </div>
+
+          <div class="calc-option" data-calc-type="system">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Sistema / App Web</span>
+              <i class="fa-solid fa-circle-check" style="color:var(--accent-cyan);"></i>
+            </div>
+            <span class="calc-option-desc">Plataforma interactiva con funciones a medida o catálogo avanzado.</span>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="calc-step-title">
+          <span>2</span> Funcionalidades Adicionales (Selecciona las que desees)
+        </div>
+        <div class="calc-options-grid">
+          <div class="calc-option selected" data-calc-addon="whatsapp">
+            <div class="calc-option-header">
+              <span class="calc-option-title">WhatsApp Directo 24/7</span>
+              <i class="fa-brands fa-whatsapp" style="color:var(--accent-emerald);"></i>
+            </div>
+            <span class="calc-option-desc">Botón e integración directa de chat para recibir prospectos de inmediato.</span>
+          </div>
+
+          <div class="calc-option selected" data-calc-addon="seo">
+            <div class="calc-option-header">
+              <span class="calc-option-title">SEO & Carga &lt; 1 seg</span>
+              <i class="fa-solid fa-bolt" style="color:var(--accent-gold);"></i>
+            </div>
+            <span class="calc-option-desc">Optimización de código para posicionar alto en Google y cargar al instante.</span>
+          </div>
+
+          <div class="calc-option" data-calc-addon="support">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Hosting & Soporte 1 Año</span>
+              <i class="fa-solid fa-server" style="color:var(--accent-blue);"></i>
+            </div>
+            <span class="calc-option-desc">Alojamiento rápido, certificado SSL y mantenimiento técnico continuo.</span>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="calc-step-title">
+          <span>3</span> Plazo Estimado de Entrega
+        </div>
+        <div class="calc-options-grid">
+          <div class="calc-option selected" data-calc-time="standard">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Estándar (7 - 10 días)</span>
+            </div>
+            <span class="calc-option-desc">Desarrollo a ritmo normal garantizando la más alta calidad.</span>
+          </div>
+
+          <div class="calc-option" data-calc-time="express">
+            <div class="calc-option-header">
+              <span class="calc-option-title">Express (48 - 72 horas)</span>
+            </div>
+            <span class="calc-option-desc">Prioridad máxima para lanzamientos urgentes.</span>
+          </div>
+        </div>
+
+        <!-- SUMMARY RESULT BOX -->
+        <div class="calc-summary-box">
+          <div>
+            <span style="font-size:0.9rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">Inversión Estimada del Proyecto</span>
+            <div class="total-estimate" id="calc-total-price">$270 USD</div>
+          </div>
+          <div id="calc-summary-text" style="font-size:0.95rem; color:var(--text-muted); line-height:1.5;"></div>
+          <a href="#" id="calc-whatsapp-btn" class="btn btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.4rem;"></i> Enviar Cotización por WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROCESO DE TRABAJO (TIMELINE) ==================== -->
+  <section class="section-padding" id="proceso" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-list-check"></i> Paso a Paso</span>
+        <h2 class="section-title">¿Cómo trabajamos tu sitio web?</h2>
+        <p class="section-subtitle">Un proceso claro, transparente y rápido de 4 pasos para tener tu web lista en tiempo récord.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="glass-card process-step">
+          <div class="step-num">01</div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Estrategia & Breve</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Analizamos tus objetivos, tu cliente ideal y los contenidos para estructurar el sitio web perfecto.</p>
+        </div>
+
+        <div class="glass-card process-step">
+          <div class="step-num">02</div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Diseño & Prototipo</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Creamos una propuesta visual moderna alineada con la identidad de tu marca.</p>
+        </div>
+
+        <div class="glass-card process-step">
+          <div class="step-num">03</div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Desarrollo & SEO</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Programación limpia, optimización de velocidad de carga y adaptación a todos los dispositivos.</p>
+        </div>
+
+        <div class="glass-card process-step">
+          <div class="step-num">04</div>
+          <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:0.5rem;">Lanzamiento & Entrega</h3>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Publicamos tu sitio web, configuramos el dominio y te enseñamos a gestionar tus mensajes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOBRE MÍ / QUIÉN SOY ==================== -->
+  <section class="section-padding" id="quien-soy" style="background: rgba(15, 23, 42, 0.2);">
+    <div class="container">
+      <div class="glass-card" style="padding: 3rem;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-user-check"></i> Autoridad & Experiencia</span>
+            <h2 class="section-title">Hola, soy Felix Rodríguez</h2>
+            <h3 style="color: var(--accent-cyan); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem;">
+              Fundador de DESDISWEB & Desarrollador Web
+            </h3>
+            
+            <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              Soy un apasionado de la tecnología con más de 6 años de experiencia en el desarrollo y diseño de plataformas digitales. Mi objetivo es claro: <strong>ayudar a emprendedores y empresas a convertir su presencia digital en su mejor canal de ventas</strong>.
+            </p>
+
+            <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Me caracterizo por el constante aprendizaje, la responsabilidad y la entrega de soluciones web robustas, rápidas y visualmente impecables.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <img src="img/iujel.webp" alt="Logo IUJEL" style="height: 38px; width: auto; object-fit: contain;">
+                <div>
+                  <strong style="font-size: 0.95rem;">T.S.U. en Administración en Informática</strong>
+                  <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">Instituto Universitario Jesús Enrique Lossada (IUJEL)</span>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.03); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <img src="img/ciu.webp" alt="Logo CIU" style="height: 38px; width: auto; object-fit: contain;">
+                <div>
+                  <strong style="font-size: 0.95rem;">Bachelor of Management in Science</strong>
+                  <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">Caribbean International University (CIU)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="position: relative; display: inline-block;">
+              <div style="width: 280px; height: 280px; border-radius: 50%; background: var(--grad-primary); padding: 4px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);">
+                <div style="width: 100%; height: 100%; border-radius: 50%; background: var(--bg-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; padding: 2rem;">
+                  <i class="fa-solid fa-code" style="font-size: 3.5rem; color: var(--accent-cyan);"></i>
+                  <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.3rem;">DESDISWEB</span>
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Tocancipá, Colombia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PREGUNTAS FRECUENTES (FAQ) ==================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Resuelve tus Dudas</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">Todo lo que necesitas saber antes de comenzar tu proyecto web.</p>
+      </div>
+
+      <div class="faq-container">
+        
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>¿Cuánto tiempo tarda en estar lista mi página web?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Una Landing Page estándar tarda entre 5 a 7 días hábiles. Sitios web corporativos más completos toman de 7 a 14 días. También contás con el servicio Express si lo necesitas de urgencia en 48-72 horas.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿La página web se verá bien en teléfonos móviles?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            ¡Totalmente! Todos mis proyectos están construidos bajo la filosofía <em>Mobile-First</em>, lo que garantiza que tu web se verá perfecta en smartphones, tablets, laptops y pantallas 4K.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Necesito comprar un dominio y hosting aparte?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Te asesoro personalmente en la elección del dominio (.com, .co, etc.) y hosting. Si lo prefieres, me puedo encargar de todo el proceso técnico para que no tengas que preocuparte por nada.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Cómo llegan las cotizaciones de los clientes a mi teléfono?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Integramos un botón flotante y un formulario automatizado que envía directamente la información de los clientes interesados a tu cuenta de WhatsApp con un mensaje estructurado.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO & FORMULARIO ==================== -->
+  <section class="section-padding" id="contacto">
+    <div class="container">
+      <div class="glass-card contact-card">
+        
+        <div class="contact-info">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-envelope"></i> Hablemos Directamente</span>
+            <h2 style="font-family:var(--font-heading); font-size:2rem; font-weight:800; margin-bottom:1rem;">
+              ¿Listo para convertir tu web en una máquina de ventas?
+            </h2>
+            <p style="color:var(--text-muted);">
+              Escríbeme para conversar sobre tu proyecto y te responderé en menos de 2 horas.
+            </p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong style="display:block;">Ubicación</strong>
+                <span style="color:var(--text-muted); font-size:0.9rem;">Tocancipá, Cundinamarca, Colombia</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <strong style="display:block;">WhatsApp Directo</strong>
+                <span style="color:var(--text-muted); font-size:0.9rem;">Atención inmediata y personalizada</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <strong style="display:block;">Desarrollador Web</strong>
+                <span style="color:var(--text-muted); font-size:0.9rem;">DESDISWEB - Felix</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="form-name">Tu Nombre</label>
+            <input type="text" id="form-name" class="form-control" placeholder="Ej. Carlos Pérez" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Correo Electrónico o Teléfono</label>
+            <input type="text" id="form-email" class="form-control" placeholder="Ej. carlos@negocio.com o +57..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-project">Tipo de Proyecto</label>
+            <select id="form-project" class="form-control">
+              <option value="Landing Page de Venta">Landing Page de Venta</option>
+              <option value="Sitio Web Corporativo">Sitio Web Corporativo</option>
+              <option value="Rediseño / Optimización Web">Rediseño / Optimización Web</option>
+              <option value="Otro Servicio">Otro Servicio</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Cuéntame brevemente sobre tu idea</label>
+            <textarea id="form-message" class="form-control" placeholder="Quiero una web para mi negocio de..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje a WhatsApp
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <i class="fa-solid fa-code"></i>
+            <span>DESDIS<span class="gradient-text">WEB</span></span>
+          </a>
+          <p style="font-size:0.9rem; max-width:400px; color:var(--text-muted);">
+            Desarrollo y Diseño Web de alta conversión enfocado en hacer crecer negocios en Colombia y Latinoamérica.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--text-main); font-weight:700; margin-bottom:1rem;">Navegación</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem;">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Portafolio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#cotizador">Cotizador</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--text-main); font-weight:700; margin-bottom:1rem;">Proyectos Destacados</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem;">
+            <li><a href="#" data-project-trigger="fera">Proyecto FERA</a></li>
+            <li><a href="#" data-project-trigger="columbario">Proyecto COLUMBARIO</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border-color); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:0.85rem;">
+        <p>&copy; 2026 DESDISWEB. Desarrollado por Felix. Todos los derechos reservados.</p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--accent-cyan);"></i> Tocancipá, Cundinamarca, Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <a href="https://wa.me/573000000000?text=Hola%20Felix,%20me%20interesa%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-badge">1</span>
+  </a>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="project-modal" style="display:none; position:fixed; inset:0; z-index:10000; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); align-items:center; justify-content:center; padding:1.5rem;">
+    <div class="glass-card" style="max-width:700px; width:100%; max-height:90vh; overflow-y:auto; padding:2rem; position:relative; background:var(--bg-dark); border-color:var(--accent-cyan);">
+      <button id="modal-close" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:var(--text-main); font-size:1.5rem; cursor:pointer;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <img id="modal-img" src="" alt="Project Preview" style="border-radius:var(--radius-md); margin-bottom:1.5rem; width:100%; height:260px; object-fit:cover;">
+      
+      <h3 id="modal-title" style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;"></h3>
+      
+      <div id="modal-tags" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem;"></div>
+      
+      <p id="modal-desc" style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:1.5rem;"></p>
+      
+      <div style="display:flex; gap:1rem; justify-content:flex-end;">
+        <a href="#cotizador" class="btn btn-primary" onclick="document.getElementById('project-modal').style.display='none';">
+          <i class="fa-solid fa-rocket"></i> Cotizar Proyecto Similar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
 </html>
