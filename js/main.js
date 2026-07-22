@@ -1,6 +1,6 @@
 /* ==========================================================================
    DESDISWEB - Interactive Web Application Logic
-   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals & FERA/COLUMBARIO Live Links
+   Handles Cotizador, WhatsApp Brief Generator, FAQ, Modals, FormSubmit & Live Links
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -186,18 +186,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCalculator();
 
-  // --- 6. Contact Form Handler ---
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('form-name')?.value || '';
+  // --- 6. FormSubmit & WhatsApp Secondary Handler ---
+  const btnWhatsappDirect = document.getElementById('btn-send-whatsapp-direct');
+  if (btnWhatsappDirect) {
+    btnWhatsappDirect.addEventListener('click', () => {
+      const name = document.getElementById('form-name')?.value || 'Cliente';
       const email = document.getElementById('form-email')?.value || '';
       const message = document.getElementById('form-message')?.value || '';
 
       const waMsg = `¡Hola Felix Rodriguez! Soy ${name} (${email}).\n\nMensaje: ${message}`;
       window.open(`https://wa.me/573000000000?text=${encodeURIComponent(waMsg)}`, '_blank');
     });
+  }
+
+  // Success Notice from FormSubmit Return
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    const successMsg = document.getElementById('form-success-msg');
+    if (successMsg) {
+      successMsg.style.display = 'block';
+    }
   }
 
   // --- 7. Project Modal Handler with Live URLs ---

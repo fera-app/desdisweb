@@ -613,7 +613,7 @@
     </div>
   </section>
 
-  <!-- ==================== CONTACT SECTION ==================== -->
+  <!-- ==================== CONTACT SECTION CON FORMSUBMIT & WHATSAPP ==================== -->
   <section class="section-padding" id="contacto" style="background: rgba(15, 23, 42, 0.4);">
     <div class="container">
       <div class="contact-grid">
@@ -621,7 +621,7 @@
           <span class="section-tag">Contacto Directo</span>
           <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
           <p style="color:var(--text-muted); margin-bottom:2rem;">
-            Estoy listo para desarrollar tu aplicación o sitio web. Escríbeme y analicemos tu idea sin ningún compromiso.
+            Puedes enviar un mensaje directo a mi correo electrónico vinculado o escribirme por WhatsApp.
           </p>
 
           <div style="display:flex; flex-direction:column; gap:1.5rem;">
@@ -644,29 +644,57 @@
                 <p style="color:var(--text-muted); font-size:0.9rem;">San Cristóbal, Venezuela & Bogotá, Colombia</p>
               </div>
             </div>
+
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <div style="width:50px; height:50px; border-radius:12px; background:rgba(99,102,241,0.12); display:flex; align-items:center; justify-content:center; color:var(--accent-indigo); font-size:1.3rem;">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h4 style="font-size:1rem; font-weight:700;">Correo Electrónico Directo</h4>
+                <p style="color:var(--text-muted); font-size:0.88rem;">rodriguezaraquefelixedwin@gmail.com</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="glass-card" style="padding:2.5rem;">
-          <form id="contact-form">
+          <!-- Banner de Confirmación Exitoso -->
+          <div id="form-success-msg" style="display:none; padding:1rem; background:rgba(16,185,129,0.2); border:1px solid var(--accent-emerald); border-radius:var(--radius-sm); margin-bottom:1.5rem; color:var(--text-main); font-size:0.9rem;">
+            <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald); font-size:1.2rem; vertical-align:middle;"></i>
+            ¡Gracias por tu mensaje! Ha sido enviado exitosamente a mi correo electrónico (rodriguezaraquefelixedwin@gmail.com). Te responderé muy pronto.
+          </div>
+
+          <!-- Formulario FormSubmit Integrado -->
+          <form id="contact-form" action="https://formsubmit.co/af332751874c40db2ce10aa0083459f5" method="POST">
+            <!-- Campos Ocultos FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuevo Mensaje de Contacto - DESDISWEB (Felix Rodriguez)">
+            <input type="hidden" name="_next" value="https://cratire.github.io/desdisweb/index.html?success=true#contacto">
+            <input type="hidden" name="_template" value="table">
+
             <div class="form-group">
               <label for="form-name">Nombre completo</label>
-              <input type="text" id="form-name" class="form-control" placeholder="Tu nombre" required>
+              <input type="text" id="form-name" name="name" class="form-control" placeholder="Tu nombre" required>
             </div>
 
             <div class="form-group">
               <label for="form-email">Correo Electrónico / WhatsApp</label>
-              <input type="text" id="form-email" class="form-control" placeholder="Tu correo o WhatsApp" required>
+              <input type="text" id="form-email" name="email" class="form-control" placeholder="tu@correo.com o tu WhatsApp" required>
             </div>
 
             <div class="form-group">
               <label for="form-message">Cuéntame sobre tu proyecto</label>
-              <textarea id="form-message" class="form-control" placeholder="Hola Felix Rodriguez, me gustaría desarrollar una aplicación web..."></textarea>
+              <textarea id="form-message" name="comments" class="form-control" placeholder="Hola Felix Rodriguez, me gustaría desarrollar una aplicación web..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
-              <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje Directo
-            </button>
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje a Mi Correo Electrónico
+              </button>
+              <button type="button" id="btn-send-whatsapp-direct" class="btn btn-whatsapp" style="width: 100%;">
+                <i class="fa-brands fa-whatsapp"></i> O Enviar Mensaje Directo por WhatsApp
+              </button>
+            </div>
           </form>
         </div>
       </div>
