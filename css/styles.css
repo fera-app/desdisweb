@@ -215,9 +215,9 @@ h1, h2, h3, h4, h5, h6 {
 /* --- HERO SECTION WITH DESATURATED CODE OVERLAY, DARK GEAR WATERMARKS & WAVES --- */
 .hero-section {
   position: relative;
-  min-height: 90vh;
-  padding-top: 8.5rem;
-  padding-bottom: 8rem;
+  min-height: 75vh;
+  padding-top: 5.2rem;
+  padding-bottom: 5.5rem;
   display: flex;
   align-items: center;
   background-image: url('../img/portada.webp');
@@ -818,7 +818,7 @@ textarea.form-control {
   position: absolute;
   top: -2px;
   right: -2px;
-  background: var(--accent-terracotta);
+  background: var(--accent-denim);
   color: #fff8ee;
   font-size: 0.7rem;
   font-weight: 800;

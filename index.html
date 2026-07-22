@@ -193,17 +193,17 @@
         <!-- Proyecto FERA Card con Enlace Directo en Vivo -->
         <article class="glass-card project-card">
           <div class="project-thumb-container" style="height: 260px;">
-            <img src="img/fera-dashboard.png" id="fera-main-img" alt="Pantalla real de Dashboard FERA desarrollado por Felix Rodriguez" class="project-thumb" style="transition: opacity 0.2s ease;">
+            <img src="img/fera-login.png" id="fera-main-img" alt="Pantalla real de Acceso y Login FERA desarrollado por Felix Rodriguez" class="project-thumb" style="transition: opacity 0.2s ease;">
             <span class="project-badge"><i class="fa-solid fa-star"></i> SaaS ERP Boutique</span>
           </div>
 
-          <!-- Selector de Pantallas Reales FERA -->
+          <!-- Selector de Pantallas Reales FERA (Login primero) -->
           <div class="gallery-selector">
-            <button class="thumb-btn active-thumb" data-fera-img="img/fera-dashboard.png">
-              📊 Dashboard
+            <button class="thumb-btn active-thumb" data-fera-img="img/fera-login.png">
+              🔐 Acceso & Login
             </button>
-            <button class="thumb-btn" data-fera-img="img/fera-login.png">
-              🔐 Login / Acceso
+            <button class="thumb-btn" data-fera-img="img/fera-dashboard.png">
+              📊 Inicio / Dashboard
             </button>
             <button class="thumb-btn" data-fera-img="img/fera-bovinos.png">
               🐄 Ganado & Alertas
@@ -217,8 +217,8 @@
               Sistema SaaS ERP inteligente en vivo para la gestión ganadera y producción láctea. Incluye métricas financieras en tiempo real, trazabilidad de bovinos y notificaciones.
             </p>
             <div class="project-tags">
+              <span class="tech-tag">Acceso & Login</span>
               <span class="tech-tag">SaaS ERP Boutique</span>
-              <span class="tech-tag">Dashboard Finanzas</span>
               <span class="tech-tag">Control de Bovinos</span>
               <span class="tech-tag">JavaScript ES6+</span>
             </div>
@@ -238,20 +238,20 @@
         <!-- Proyecto COLUMBARIO (SacroGest) Card con Enlace Directo en Vivo -->
         <article class="glass-card project-card">
           <div class="project-thumb-container" style="height: 260px;">
-            <img src="img/columbario-dashboard.png" id="columbario-main-img" alt="Pantalla real de SacroGest Columbario desarrollado por Felix Rodriguez" class="project-thumb" style="transition: opacity 0.2s ease;">
-            <span class="project-badge" style="color:var(--accent-cyan); border-color:var(--border-glow);"><i class="fa-solid fa-gem"></i> SacroGest ERP</span>
+            <img src="img/columbario-login.png" id="columbario-main-img" alt="Pantalla real de Login SacroGest Columbario desarrollado por Felix Rodriguez" class="project-thumb" style="transition: opacity 0.2s ease;">
+            <span class="project-badge" style="color:var(--accent-copper); border-color:var(--border-glow);"><i class="fa-solid fa-gem"></i> SacroGest ERP</span>
           </div>
 
-          <!-- Selector de Pantallas Reales COLUMBARIO -->
+          <!-- Selector de Pantallas Reales COLUMBARIO (Login primero, luego Inicio, luego Plano) -->
           <div class="gallery-selector">
-            <button class="thumb-btn active-thumb" data-columbario-img="img/columbario-dashboard.png">
-              📊 Dashboard & Métricas
+            <button class="thumb-btn active-thumb" data-columbario-img="img/columbario-login.png">
+              🔐 Acceso & Login
+            </button>
+            <button class="thumb-btn" data-columbario-img="img/columbario-dashboard.png">
+              📊 Inicio / Dashboard
             </button>
             <button class="thumb-btn" data-columbario-img="img/columbario-plano.png">
               🗺️ Plano Interactivo
-            </button>
-            <button class="thumb-btn" data-columbario-img="img/columbario-login.png">
-              🔐 Acceso & Login
             </button>
           </div>
 
@@ -262,9 +262,9 @@
               Plataforma web avanzada en vivo creada para la Parroquia Divino Redentor. Incorpora mapa/plano interactivo de nichos por módulos, gestión de difuntos y alertas por IA.
             </p>
             <div class="project-tags">
+              <span class="tech-tag">Acceso & Login</span>
               <span class="tech-tag">Plano Interactivo</span>
               <span class="tech-tag">Gestión de Nichos</span>
-              <span class="tech-tag">Alertas Renovación</span>
               <span class="tech-tag">Supabase Cloud</span>
             </div>
 
@@ -285,7 +285,7 @@
   </section>
 
   <!-- ==================== SHOWCASE TÉCNICO CON LINKS DIRECTOS ==================== -->
-  <section class="section-padding" style="background: rgba(15, 23, 42, 0.6); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+  <section class="section-padding" style="background: rgba(20, 23, 29, 0.6); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
     <div class="container">
       <div class="section-title-wrapper">
         <span class="section-tag">Demostración & Enlaces Oficiales</span>
@@ -295,22 +295,23 @@
         </p>
       </div>
 
-      <!-- Módulos FERA -->
+      <!-- Módulos FERA (Login -> Inicio -> Trazabilidad) -->
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
-        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-emerald);">
+        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-copper);">
           <i class="fa-solid fa-leaf"></i> Sistema FERA - Gestión Ganadera
         </h3>
-        <a href="https://fera-app.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge" style="background:rgba(16,185,129,0.15); border:1px solid var(--accent-emerald); color:var(--accent-emerald);">
+        <a href="https://fera-app.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge" style="background:rgba(200,150,101,0.15); border:1px solid var(--accent-copper); color:var(--accent-copper);">
           <i class="fa-solid fa-globe"></i> Visitar fera-app.pages.dev <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </div>
 
       <div class="services-grid" style="margin-bottom:3.5rem;">
+        <!-- 1. Login FERA -->
         <div class="glass-card" style="overflow:hidden;">
           <img src="img/fera-login.png" alt="Pantalla Login FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-emerald);">
-              Autenticación ERP Boutique
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              🔐 Autenticación ERP Boutique (Login)
             </h4>
             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
               Login seguro de usuarios con estética verde oscuro personalizada y opciones de recuperación.
@@ -318,11 +319,12 @@
           </div>
         </div>
 
+        <!-- 2. Dashboard FERA -->
         <div class="glass-card" style="overflow:hidden;">
           <img src="img/fera-dashboard.png" alt="Pantalla Dashboard FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-cyan);">
-              Dashboard & Finanzas
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              📊 Inicio / Dashboard & Finanzas
             </h4>
             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
               Resumen mensual con ventas de leche, balance diario, recuento de bovinos y tarjetas de alerta.
@@ -330,11 +332,12 @@
           </div>
         </div>
 
+        <!-- 3. Trazabilidad Bovinos FERA -->
         <div class="glass-card" style="overflow:hidden;">
           <img src="img/fera-bovinos.png" alt="Pantalla Bovinos FERA" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-amber);">
-              Trazabilidad de Ganado
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              🐄 Trazabilidad de Ganado
             </h4>
             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
               Tabla dinámica con registro de IDs, clasificación, estados de gestación y alarmas sanitarias.
@@ -343,22 +346,36 @@
         </div>
       </div>
 
-      <!-- Módulos COLUMBARIO (SacroGest) -->
+      <!-- Módulos COLUMBARIO (SacroGest) (Login -> Inicio -> Plano Interactivo) -->
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
-        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-cyan);">
+        <h3 style="font-size:1.4rem; font-weight:800; color:var(--accent-copper);">
           <i class="fa-solid fa-church"></i> Sistema COLUMBARIO - SacroGest Parroquial
         </h3>
-        <a href="https://columbario.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge" style="background:rgba(6,182,212,0.15); border:1px solid var(--accent-cyan); color:var(--accent-cyan);">
+        <a href="https://columbario.pages.dev" target="_blank" rel="noopener noreferrer" class="live-link-badge" style="background:rgba(200,150,101,0.15); border:1px solid var(--accent-copper); color:var(--accent-copper);">
           <i class="fa-solid fa-globe"></i> Visitar columbario.pages.dev <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </div>
 
       <div class="services-grid">
+        <!-- 1. Login COLUMBARIO -->
+        <div class="glass-card" style="overflow:hidden;">
+          <img src="img/columbario-login.png" alt="Acceso SacroGest Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+          <div style="padding:1.4rem;">
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              🔐 Acceso Parroquial SacroGest (Login)
+            </h4>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
+              Interfaz sobria y limpia con soporte para entornos de Producción Nube (Supabase) y Demostración.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Inicio / Dashboard COLUMBARIO -->
         <div class="glass-card" style="overflow:hidden;">
           <img src="img/columbario-dashboard.png" alt="Dashboard SacroGest Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-cyan);">
-              Dashboard de Métricas & Alertas
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              📊 Inicio / Dashboard de Métricas & Alertas
             </h4>
             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
               Indicadores de ocupación total, nichos disponibles, contratos vencidos, recaudación y avisos por IA.
@@ -366,26 +383,15 @@
           </div>
         </div>
 
+        <!-- 3. Plano Interactivo COLUMBARIO -->
         <div class="glass-card" style="overflow:hidden;">
           <img src="img/columbario-plano.png" alt="Plano Interactivo Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
           <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-indigo);">
-              Plano Interactivo de Nichos
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-copper);">
+              🗺️ Plano Interactivo de Nichos
             </h4>
             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
               Mapa visual filtrable por módulos (A-E), estado de espacio, difuntos inhumados y contratos activos.
-            </p>
-          </div>
-        </div>
-
-        <div class="glass-card" style="overflow:hidden;">
-          <img src="img/columbario-login.png" alt="Acceso SacroGest Columbario" style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid var(--border-color);">
-          <div style="padding:1.4rem;">
-            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; color:var(--accent-emerald);">
-              Acceso Parroquial SacroGest
-            </h4>
-            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
-              Interfaz sobria y limpia con soporte para entornos de Producción Nube (Supabase) y Demostración.
             </p>
           </div>
         </div>

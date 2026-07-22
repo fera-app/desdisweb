@@ -223,20 +223,20 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Proyecto FERA - Gestión Agropecuaria Inteligente',
       liveUrl: 'https://fera-app.pages.dev',
       images: [
-        { src: 'img/fera-dashboard.png', label: '📊 Dashboard & Finanzas' },
-        { src: 'img/fera-login.png', label: '🔐 Pantalla de Inicio / Login' },
-        { src: 'img/fera-bovinos.png', label: '🐄 Trazabilidad de Bovinos & Ganado' }
+        { src: 'img/fera-login.png', label: '🔐 Acceso & Login' },
+        { src: 'img/fera-dashboard.png', label: '📊 Inicio / Dashboard & Finanzas' },
+        { src: 'img/fera-bovinos.png', label: '🐄 Trazabilidad de Bovinos' }
       ],
-      tags: ['SaaS ERP Boutique', 'UI/UX Dark Theme', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
+      tags: ['Acceso & Login', 'SaaS ERP Boutique', 'Gestión de Ganado', 'Finanzas & Alertas', 'JavaScript ES6+', 'Dashboard Interactivo'],
       desc: 'FERA es un sistema de gestión agropecuaria inteligente en vivo (disponible en fera-app.pages.dev) desarrollado por Felix Rodriguez para optimizar el control de producción láctea, trazabilidad de ganado bovino, inventarios y finanzas en tiempo real.'
     },
     columbario: {
       title: 'Proyecto COLUMBARIO - SacroGest Parroquial',
       liveUrl: 'https://columbario.pages.dev',
       images: [
-        { src: 'img/columbario-dashboard.png', label: '📊 Dashboard & Métricas' },
-        { src: 'img/columbario-plano.png', label: '🗺️ Plano Interactivo & Nichos' },
-        { src: 'img/columbario-login.png', label: '🔐 Acceso & Credenciales' }
+        { src: 'img/columbario-login.png', label: '🔐 Acceso & Login' },
+        { src: 'img/columbario-dashboard.png', label: '📊 Inicio / Dashboard & Métricas' },
+        { src: 'img/columbario-plano.png', label: '🗺️ Plano Interactivo & Nichos' }
       ],
       tags: ['Sistema SacroGest', 'Plano Interactivo de Nichos', 'Gestión de Difuntos & Contratos', 'Alertas de Renovación', 'Sincronización Cloud', 'UI/UX Ejecutiva'],
       desc: 'COLUMBARIO (SacroGest) es una solución web funcional en vivo (disponible en columbario.pages.dev) desarrollada por Felix Rodriguez para la Parroquia Divino Redentor. Permite controlar la ocupación de nichos mediante un mapa/plano interactivo por módulos (A-E), notificaciones inteligentes e historial de difuntos.'
