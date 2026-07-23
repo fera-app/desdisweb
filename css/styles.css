@@ -253,8 +253,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section .fa-cog {
   position: absolute;
   font-size: 26rem;
-  opacity: 0.25;
-  color: #242933;
+  opacity: 0.16;
+  color: var(--accent-copper);
   animation: rotateCogs 14s linear infinite;
   z-index: 2;
   pointer-events: none;
@@ -598,6 +598,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-card {
   padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .service-icon-wrapper {
@@ -611,7 +615,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: 1.6rem;
   color: var(--accent-copper);
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
 }
 
 .service-title {
